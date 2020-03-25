@@ -1,0 +1,9 @@
+.pageBannerContainer{
+
+    background-image: url("banner.jpg");
+}
+
+#bodyContainer{
+  height: 800px;
+  width: 100%;
+}
