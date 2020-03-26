@@ -6,4 +6,5 @@
 #bodyContainer{
   height: 800px;
   width: 100%;
+  z-index: 1;
 }
