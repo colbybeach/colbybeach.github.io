@@ -22,7 +22,7 @@ body{
   transition: 0.3s;
 }
 .navBarNew a{
-  color: white;
+  color: black;
 }
 .navBarNew a:hover{
   color:black;
