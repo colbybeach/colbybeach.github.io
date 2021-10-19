@@ -1,6 +1,6 @@
 .bannerContainer{
 
-  background-image: url("bannerSoft.jpg");
+  background-image: url("banner.jpg");
   filter: blur(8px);
   background-position: center;
   background-size: cover;
@@ -37,7 +37,7 @@
 .bannerMainText{
   text-transform: uppercase;
   font-size: 4.5vw;
-  color:black;
+  color:white;
   border-style: solid;
   border-width: 0px 5px 0px 0px;
 }
