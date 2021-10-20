@@ -9,7 +9,12 @@
   position: relative;
 
 }
-
+.navBarNew a{
+  color: white;
+}
+.navBarScroll a{
+  color: black;
+}
 #homeBody1{
 
   height: 600px;
