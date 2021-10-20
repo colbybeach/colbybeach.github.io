@@ -1,7 +1,7 @@
 .bannerContainer{
 
   background-image: url("banner.jpg");
-  filter: blur(8px);
+  filter: blur(2px);
   background-position: center;
   background-size: cover;
   min-height: 100%;
@@ -152,11 +152,6 @@ iframe{
   width: 50%;
 }
 
-#halfHalf1 img{
-  position: relative;
-  top: 18px;
-  width: 70%;
-}
 .button1 {
   position: relative;
   top: 30%;
