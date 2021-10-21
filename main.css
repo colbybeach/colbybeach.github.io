@@ -84,7 +84,7 @@ body{
 
 }
 .footer a{
-  color:white;
+  color:white !important;
   text-decoration: none;
   font-size: 15px;
   position: relative;
@@ -92,7 +92,7 @@ body{
 }
 .footer a:hover{
     text-decoration: none;
-    color: #7A7A7A;
+    color: #7A7A7A !important;
 }
 .footerSpace{
   height: 100%;
