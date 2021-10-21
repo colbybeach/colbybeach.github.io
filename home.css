@@ -7,8 +7,8 @@
   min-height: 100%;
   width: 100%;
   position: relative;
-
 }
+
 .navBarNew a{
   color: white;
 }
@@ -16,7 +16,6 @@
   color: black;
 }
 #homeBody1{
-
   height: 600px;
   width: 100%;
   background-color: #1A1A1A;
