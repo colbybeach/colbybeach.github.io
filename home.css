@@ -60,7 +60,6 @@
   position: absolute;
   top: 10%;
 
-
 }
 a{
   text-decoration: none;
@@ -72,12 +71,12 @@ a{
   position: absolute;
   bottom: 0%;
   left: 0%;
-
 }
 
 .scrollFade{
-  opacity: 0;
+  
   transition: 0.3s;
+  opacity: 0;
 
 }
 .readmore{
