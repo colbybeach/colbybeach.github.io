@@ -54,14 +54,12 @@ body{
 }
 
 .footer1{
-
     height: 400px;
     width: 100%;
     background-color: #282828;
 
 }
 #stayConnected{
-
   text-transform: uppercase;
   color:white;
   font-size: 23px;

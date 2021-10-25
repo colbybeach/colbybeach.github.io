@@ -1,7 +1,3 @@
-
-//*** Nav Bar*****************//
-//////////////////////////////////////////
-
 $(function() {
 
       var header = $(".navBarNew");
@@ -37,28 +33,32 @@ $(function() {
 
       $(window).on('resize', function(){
 
-        if (win.width() > 1280) {
+        if (win.width() > 750) {
 
             $("#body1Left").css("font-size", "18px");
             $("#halfHalf1 img").css("width","430px");
 
+            //Software Page 
+            $("#bcHalfLeft").css("float", "left");
+            $("#bcHalfRight").css("float", "right");
+            $("#bcHalfRight").css("float", "right");
+
         }else{
           $("#body1Left").css("font-size", "1.3vw");
           $("#halfHalf1 img").css("width","70%");
+
+
         }
 
 
       });
 
        $(document).ready(function() {
-          if (win.width() > 1280) {
+          if (win.width() > 750) {
+            $("#body1Left").css("font-size", "18px");
+            $("#halfHalf1 img").css("width","430px");
 
-              $("#body1Left").css("font-size", "18px");
-              $("#halfHalf1 img").css("width","430px");
           }
     });
 
-
-
-  //End of the function
-      });
+});

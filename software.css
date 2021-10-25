@@ -6,7 +6,8 @@
 }
 
 #bodyContainer{
-  height: 1100px;
+  position: relative;
+  min-height: 1100px;
   width: 100%;
 }
 .seperator {
@@ -52,8 +53,8 @@
 }
 
 #bcHalfRight{
-  width:50%;
   float:right;
+  width:50%;
   height: 100%;
 }
 

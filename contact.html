@@ -2,12 +2,16 @@
 <head>
 
   <title>CONTACT - Colby Beach</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link type="text/css" rel="stylesheet" href="contact.css" />
   <link type="text/css" rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="navbar.js"></script>
+  <script type="text/javascript" src="contactform.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="icon" type="image/png" href="favicon.png">
@@ -59,18 +63,22 @@
       Send me an email
     </div>
 
-    <form id="contactForm">
+    <form method="post" id="contactForm">
+
       Name<br>
-      <input type="text" name="name" required><br>
+      <input type="text" id="name" required><br>
+
       Email address<br>
-      <input type="text" name="email" required><br>
+      <input type="text" id="email" required><br>
+
       Subject<br>
-      <input type="text" name="subject" required><br>
+      <input type="text" id="subject" required><br>
+
       Message<br>
-      <textarea id="messageForm" name="message"  value="..." required>...</textarea><br>
+      <textarea id="messageForm" required>...</textarea><br>
       
       <div id ="subButton">
-        <button type="submit" value="submit">Submit</button>
+        <button type="submit" onclick="sendEmail()">Submit</button>
       </div>
     </form>
 
