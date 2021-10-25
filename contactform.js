@@ -13,7 +13,7 @@ function getFormData(){
 
 function sendEmail(){
 
-    alert(getFormData())
+   // alert(getFormData())
 
 }
 
