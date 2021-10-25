@@ -1,4 +1,5 @@
 function originalCSS(){
+
   $("#bcHalfLeft").css("float", "left");
   $("#bcHalfLeft").css("height", "1100px");
 
@@ -8,7 +9,7 @@ function originalCSS(){
 
 
   $(".grid-container").css("width", "67%")
-  $(".grid-item").css("font-size", "120%")
+  $(".grid-container").css("font-size", "100%")
 }
 
 function changeCSS(){
@@ -25,7 +26,11 @@ function changeCSS(){
 
 
   $(".grid-container").css("width", "100%")
-  $(".grid-item").css("font-size", "100%")
+  $(".grid-container").css("font-size", "70%")
+
+
+
+
 
 }
 
@@ -33,29 +38,24 @@ $(function() {
 
     var win = $(this);
 
+    //When resizing 
     $(window).on('resize', function(){
 
       if (win.width() > 750) {
-
         originalCSS()
-
       }else{
-    
         changeCSS()
       }
 
     });
 
+    //On load 
      $(document).ready(function() {
-        if (!win.width() > 750) {
-       
-          originalCSS()
 
+        if (!win.width() > 750) {
+          originalCSS()
         }else{
           changeCSS()
         }
   });
-
-
-
 });
