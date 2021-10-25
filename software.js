@@ -52,7 +52,7 @@ $(function() {
     //On load 
      $(document).ready(function() {
 
-        if (!win.width() > 750) {
+        if (win.width() > 750) {
           originalCSS()
         }else{
           changeCSS()
