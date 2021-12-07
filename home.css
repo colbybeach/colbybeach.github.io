@@ -87,6 +87,7 @@ a{
   text-align: center;
 
 }
+
 /*Body 1 Section*/
 #body1Left{
   width: 50%;
@@ -94,8 +95,8 @@ a{
   float: left;
   padding-left: 6%;
   padding-top: 5%;
-  font-size: 1.3vw;
 }
+
 #body1Left a{
   color: white;
 }
@@ -103,6 +104,7 @@ a{
   text-decoration: none;
   color: #7A7A7A;
 }
+
 
 
 #body1Right{
@@ -116,7 +118,6 @@ a{
   top: 15%;
   left: 30%;
   width: 350px;
-
 }
 
 /*Home Body2*/

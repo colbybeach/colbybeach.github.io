@@ -28,10 +28,6 @@ function changeCSS(){
   $(".grid-container").css("width", "100%")
   $(".grid-container").css("font-size", "70%")
 
-
-
-
-
 }
 
 $(function() {
