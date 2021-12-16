@@ -33,11 +33,12 @@ function changeCSS(){
 $(function() {
 
     var win = $(this);
+    var width = 750
 
     //When resizing 
     $(window).on('resize', function(){
 
-      if (win.width() > 750) {
+      if (win.width() > width) {
         originalCSS()
       }else{
         changeCSS()
@@ -48,7 +49,7 @@ $(function() {
     //On load 
      $(document).ready(function() {
 
-        if (win.width() > 750) {
+        if (win.width() > width) {
           originalCSS()
         }else{
           changeCSS()

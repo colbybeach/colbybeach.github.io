@@ -47,7 +47,6 @@
 }
 
 #logoDescText{
-
   height: 40%;
   width: 40%;
   position: absolute;
@@ -93,8 +92,8 @@ a{
   width: 50%;
   height: 100%;
   float: left;
-  padding-left: 6%;
-  padding-top: 5%;
+  padding: 5% 0% 0% 6%;
+
 }
 
 #body1Left a{
@@ -105,7 +104,9 @@ a{
   color: #7A7A7A;
 }
 
-
+#aboutMeText{
+  font-size: 2.2vh;
+}
 
 #body1Right{
   width: 50%;
