@@ -27,7 +27,7 @@ function changeCSS(){
   $(".bannerMainText").hide()
   $(".bannerDescText").css("font-size", "40px");
   $(".bannerDescText").css("text-align", "center");
-  $("#logoDescText").css("left", "30%")
+  $("#logoDescText").css("left", "28%")
 
   $("#body1Left").css("float", "none");
   $("#body1Left").css("width", "100%");
