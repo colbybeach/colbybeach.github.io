@@ -16,7 +16,7 @@ export default function NavBar() {
                 <Button className='buttonActive' variant="text" href="#">Home</Button>
                 <Button variant="text" href="#skills">Skills</Button>
                 <Button variant="text" href="#experience">Experience</Button>
-                <Button style={{backgroundColor: 'var(--main-secondary-1)'}} 
+                <Button className='containedButton' 
                 variant="contained" href="#contact">Contact</Button>
             </div>
 

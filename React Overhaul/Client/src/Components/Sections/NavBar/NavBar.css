@@ -28,9 +28,7 @@
     align-items: center;
 }
 
-#NavBarSecondaryContainer a{
-    color: black !important;
-}
+
 
 .buttonActive{
     color: var(--main-secondary-1) !important;
