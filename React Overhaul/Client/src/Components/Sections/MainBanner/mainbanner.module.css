@@ -1,6 +1,24 @@
 .MainBannerContainer{
     position: absolute;
-    height: 50%;
+    height: 500px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
+.bannerTitle{
+    font-size: 80px;
+}
+
+.bannerBio{
+    width: 60%;
+    margin: 20px 20px 40px 0px;
+    color: var(--main-secondary-2);
+}
+
+.contactButton{
+    background-color: var(--main-secondary-1) !important;
+    color: white !important;
+}
