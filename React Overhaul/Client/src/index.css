@@ -21,8 +21,3 @@ a{
     color: black !important;
     margin: 3px !important;
 }
-
-.containedButton{
-    background-color: var(--main-secondary-1) !important;
-    color: white !important;
-}

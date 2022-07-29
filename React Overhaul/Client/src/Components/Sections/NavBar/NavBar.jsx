@@ -1,22 +1,20 @@
 import { Button } from '@mui/material'
 import React from 'react'
-import './NavBar.css'
+import styles from './navbar.module.css'
 
 export default function NavBar() {
   return (
-    <div id="MainNavBarContainer">
-
-        <div id="NavBarSecondaryContainer">
-
-            <div id="NavBar-LogoContainer">
+    <div className={styles.MainNavBarContainer}>
+        <div className={styles.NavBarSecondaryContainer}>
+            <div className={styles.NavBarLogoContainer}>
                 <Button variant="text" href="#">Colby Beach</Button>          
             </div>
 
-            <div id="NavBar-OtherLinksContainer">
-                <Button className='buttonActive' variant="text" href="#">Home</Button>
+            <div className={styles.NavBarOtherLinksContainer}>
+                <Button className={styles.buttonActive} variant="text" href="#">Home</Button>
                 <Button variant="text" href="#skills">Skills</Button>
                 <Button variant="text" href="#experience">Experience</Button>
-                <Button className='containedButton' 
+                <Button className={styles.containedButton} 
                 variant="contained" href="#contact">Contact</Button>
             </div>
 
