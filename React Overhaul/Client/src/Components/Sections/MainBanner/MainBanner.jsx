@@ -6,7 +6,7 @@ export default function MainBanner() {
   return (
     <div className={styles.MainBannerContainer}>
 
-      <div style={{width: '30%'}}>
+      <div style={{width: '40%'}}>
 
 
         <h1 className={styles.bannerTitle}>Who...Me?</h1>

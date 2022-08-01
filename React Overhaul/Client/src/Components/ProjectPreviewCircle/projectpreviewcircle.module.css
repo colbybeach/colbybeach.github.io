@@ -1,0 +1,23 @@
+.mainCircle{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    transition: 0.3s;
+}
+
+.mainCircle:hover{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+    transition: 0.3s;
+
+}
