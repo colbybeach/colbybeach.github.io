@@ -3,6 +3,10 @@
     --main-bg-color-2: white;
     --main-secondary-1: #f86604;
     --main-secondary-2: grey;
+
+    --box-shadow-1: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    --box-shadow-2: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+
 }
 
 html{

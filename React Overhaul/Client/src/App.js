@@ -3,6 +3,7 @@ import NavBar from './Components/Sections/NavBar/NavBar';
 import MainBanner from './Components/Sections/MainBanner/MainBanner';
 import Section from './Components/Section';
 import ProjectPreviewBanner from './Components/Sections/ProjectPreviewBanner/ProjectPreviewBanner';
+import SkillsSection from './Components/Sections/SkillsSection/SkillsSection';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
       <Section height={'700px'} background={'white'} id={"skills"} content= {
         <>
+          <SkillsSection />
         </>
       }/>
       <Section height={'800px'} background={'var(--main-bg-color-1)'} id={"experience"} content= {
