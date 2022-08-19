@@ -1,0 +1,14 @@
+.mainContainer{
+    width: 380px;
+    height: 420px;
+    box-shadow: var(--box-shadow-1);
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.mainContainer:hover{
+    box-shadow: var(--box-shadow-2);
+    transition: 0.3s;
+}

@@ -1,0 +1,22 @@
+.mainBannerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    text-transform: uppercase;
+}
+.projectRow{
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-1);
+    background-color: var(--main-bg-color-1);
+
+}

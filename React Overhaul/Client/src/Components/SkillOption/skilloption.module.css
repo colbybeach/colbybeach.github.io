@@ -6,6 +6,7 @@
     margin: 10px;
     transition: 0.3s;
     z-index: 3;
+    cursor: pointer;
 }
 
 .secondaryContainer:hover{
@@ -15,7 +16,7 @@
 .gradient{
     height: 140px;
     width: 420px;
-    background-image: linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.5));
+    background-image: linear-gradient(to left, rgb(212, 171, 241,0.3) , rgb(248, 102, 4,0.2));
     position: absolute;
     bottom: 1;
     margin-bottom: 23%;
