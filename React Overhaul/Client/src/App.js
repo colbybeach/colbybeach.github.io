@@ -16,7 +16,7 @@ function App() {
           <MainBanner />
         </>
       }/>
-       <Section height={'300px'} background={'white'} content= {
+       <Section height={'300px'} background={'linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white, white, white, white)'} content= {
           <ProjectPreviewBanner />
       }/>
 
@@ -30,7 +30,7 @@ function App() {
       <Section height={'700px'} background={'white'} content= {
           <ProjectSection/>
       }/>
-      <Section height={'600px'} background={'white'} content= {
+      <Section height={'600px'} background={'linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white, white, white, white)'} content= {
           <GithubSection />
       }/>
       <Section height={'600px'} background={'white'} id={"contact"} content= {

@@ -6,22 +6,16 @@
 }
 
 .contentContainer{
-    width: 45%;
+    width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .circleRow{
     width: 100%;
     margin-top: 50px;
     display: flex;
-    justify-content: center;
 }
 
-
-
-.gradientHalf{
-    width: 40%;
-    background: linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white);
-}

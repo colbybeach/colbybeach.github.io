@@ -1,6 +1,6 @@
 .MainNavBarContainer{
     position: fixed;
-    width: 100%;
+    width: 75%;
     height: 80px;
     display: flex;
     align-items: center;
@@ -9,13 +9,12 @@
 }
 
 .NavBarSecondaryContainer{
-    width: 70%;
+    width: 100%;
     height: 90%;
     background-color: white;
     display: flex;
     justify-content: space-around;
     border-radius: 10px;
-    margin: 30px;
     box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
 }
 

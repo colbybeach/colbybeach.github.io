@@ -4,8 +4,3 @@
     height: 100%;
     width: 100%;
 }
-
-.gradientHalf{
-    width: 40%;
-    background: linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white);
-}

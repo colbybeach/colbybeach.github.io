@@ -8,10 +8,10 @@ export default function SkillOption({active, onClick, image, title, desc}) {
     function moveGradient(){
         const styles = {marginBottom: '23%'}
 
-        if(active == 0) styles.marginBottom = '22.95%'
-        if(active == 1) styles.marginBottom = '7.7%'
-        if(active == 2) styles.marginBottom = '-7.8%'
-        if(active == 3) styles.marginBottom = '-23%'
+        if(active == 0) styles.marginBottom = '420px'
+        if(active == 1) styles.marginBottom = '140px'
+        if(active == 2) styles.marginBottom = '-140px'
+        if(active == 3) styles.marginBottom = '-420px'
     
         return styles
     }
