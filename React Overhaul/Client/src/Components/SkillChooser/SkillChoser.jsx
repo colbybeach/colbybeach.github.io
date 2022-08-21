@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import SkillOption from '../SkillOption/SkillOption'
 import styles from './skillchoser.module.css'
-import { Card } from '@mui/material'
 
 
 export default function SkillChoser() {
@@ -10,7 +9,7 @@ export default function SkillChoser() {
 
     return (
 
-        <Card className={styles.mainContainer}>
+        <div className={styles.mainContainer}>
 
             <SkillOption 
                 active={whatActive}
@@ -29,7 +28,7 @@ export default function SkillChoser() {
                 onClick={() => setActive(3)}
             />
 
-        </Card>
+        </div>
 
     )
 }

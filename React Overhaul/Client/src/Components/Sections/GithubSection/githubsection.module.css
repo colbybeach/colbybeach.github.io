@@ -1,6 +1,7 @@
-.mainBannerContainer{
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
+.mainContainer{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 100% !important;
+    width: 100% !important;
 }
