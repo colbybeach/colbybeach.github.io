@@ -81,6 +81,8 @@ export default function GithubSection() {
     return (
         <div className={styles.mainContainer}>
 
+            <h1>GITHUB REPOS</h1>
+
             <Table columns={columns} dataSource={data} />
 
         </div>
