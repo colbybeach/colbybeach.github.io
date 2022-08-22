@@ -9,17 +9,21 @@
 .header{
     text-transform: uppercase;
     margin-top: 50px;
-
 }
 .projectRow{
     width: 100%;
     height: 500px;
-    display: flex;
     margin-top: 20px;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 10px;
     box-shadow: var(--box-shadow-1);
-    background-color: var(--main-bg-color-1);
-
+    background: linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3));
+}
+.car{
+    height: 500px;
+    z-index: 100;
+}
+.carRow{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
 }

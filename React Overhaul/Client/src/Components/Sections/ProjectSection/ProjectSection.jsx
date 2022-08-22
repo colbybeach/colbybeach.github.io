@@ -1,8 +1,12 @@
+import { Carousel } from 'antd'
 import React from 'react'
 import ProjectCard from '../../ProjectCard/ProjectCard'
 import styles from './projectsection.module.css'
+import { ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons'
 
 export default function ProjectSection() {
+
+
     return (
         <div className={styles.mainBannerContainer}>
 
@@ -11,9 +15,34 @@ export default function ProjectSection() {
             <div className={styles.projectRow}>
 
 
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                <Carousel 
+                    className={styles.car} 
+                    arrows 
+                    prevArrow={<ArrowLeftOutlined />}
+                    nextArrow={<ArrowRightOutlined />}
+                >
+
+                    
+                    <div className={styles.carRow}>
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                    </div>
+                    <div className={styles.carRow}>
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                    </div>
+                    <div className={styles.carRow}>
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                    </div>
+
+                </Carousel>
+
+   
+            
 
             </div>
         

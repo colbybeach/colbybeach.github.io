@@ -27,3 +27,15 @@ a{
     color: black !important;
     margin: 3px !important;
 }
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next {
+  color: var(--main-secondary-1) !important;
+  font-size: 20px !important;
+}
+
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-next:focus {
+  color: var(--main-secondary-1)  !important;
+}

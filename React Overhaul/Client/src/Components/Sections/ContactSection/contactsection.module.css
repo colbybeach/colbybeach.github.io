@@ -1,0 +1,24 @@
+.mainBannerContainer{
+    display: flex;
+    height: 550px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.formContainer{
+    width: 50%;
+}
+.button{
+    background-color: var(--main-secondary-1) !important;
+}
+.socialMediaRow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 300px;
+}
+.socialMediaIcon{
+    width: 50px;
+}

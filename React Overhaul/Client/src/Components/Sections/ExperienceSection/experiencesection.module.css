@@ -1,6 +1,27 @@
 .mainBannerContainer{
     display: flex;
-    justify-content: space-between;
-    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
     width: 100%;
+}
+
+.chosenContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chosenText{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.car{
+    width: 400px;
+    z-index: 100;
+}
+.expRow{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
 }
