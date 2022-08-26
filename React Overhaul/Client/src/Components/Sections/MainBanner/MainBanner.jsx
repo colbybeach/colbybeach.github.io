@@ -1,16 +1,17 @@
 import React from 'react'
 import styles from './mainbanner.module.css'
 import Button from '@mui/material/Button'
-import githubIcon from '../../../Images/githubIcon2.png'
-import linkedinIcon from '../../../Images/linkedinIcon2.png'
-import youtubeIcon from '../../../Images/youtubeIcon2.png'
+import githubIcon from '../../../Images/githubIcon.png'
+import linkedinIcon from '../../../Images/linkedinIcon.png'
+import youtubeIcon from '../../../Images/youtubeIcon.png'
+import nobackground from '../../../Images/nobackground.png'
 
 
 export default function MainBanner() {
   return (
     <div className={styles.MainBannerContainer}>
 
-      <div style={{width: '60%'}}>
+      <div style={{width: '55%', marginTop: '90px'}}>
 
 
         <h1 className={styles.bannerTitle}>Who...Me?</h1>
@@ -24,8 +25,6 @@ export default function MainBanner() {
         </p>
 
 
-
-
         <div style={{display: 'flex'}}>
 
           <Button 
@@ -36,15 +35,30 @@ export default function MainBanner() {
             Contact Me!
           </Button>
 
-          <img className={styles.socialMediaIcon} src={githubIcon} />
-          <img className={styles.socialMediaIcon} src={linkedinIcon} />
-          <img className={styles.socialMediaIcon} src={youtubeIcon} />
 
         </div>
 
       </div>
 
-      <div style={{width: "40%"}}>
+      <div className={styles.rightSide}>
+
+        <div className={styles.backgroundSquare}>
+        </div>
+
+        <img src={nobackground} className={styles.colbyImage}/>
+
+        <div className={styles.socialMediaIcon1Box}>
+          <img className={styles.socialMediaIcon} src={githubIcon} />
+        </div>
+
+
+        <div className={styles.socialMediaIcon2Box}>
+          <img className={styles.socialMediaIcon} src={linkedinIcon} />
+        </div>
+
+        <div className={styles.socialMediaIcon3Box}>
+          <img className={styles.socialMediaIcon} src={youtubeIcon} />
+        </div>
         
       </div>
     </div>

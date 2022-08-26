@@ -40,7 +40,9 @@ export default function ProjectPreviewBanner() {
         </div>        
       </div>
       
-      <div className={styles.gradientHalf}></div>
+      <div className={styles.gradientHalf}>
+        
+      </div>
     </div>
   )
 }

@@ -4,8 +4,25 @@ import { Carousel } from 'antd'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import jg1 from '../../../Images/jg1.jpg'
 import ExpChooser from '../../ExpChooser/ExpChooser'
+import { useState } from 'react'
 
 export default function ExperienceSection() {
+
+  const [active, setActive] = useState(0)
+
+  function moveGrad(){
+    if(active == 0){
+      return {
+        marginRight : '70%',
+      }
+    }else if (active == 2){
+      return {
+        marginLeft : '70%',
+      }
+    }else return {}
+  }
+
+
   return (
     <div className={styles.mainBannerContainer}>
 
@@ -50,9 +67,12 @@ export default function ExperienceSection() {
         </div>
 
         <div className={styles.expRow}>
-          <ExpChooser />
-          <ExpChooser />
-          <ExpChooser />
+
+          <div className={styles.gradient} style={moveGrad()}/>
+
+          <ExpChooser style={{marginRight: '70%'}} onClick={() => setActive(0)}/>
+          <ExpChooser onClick={() => setActive(1)}/>
+          <ExpChooser style={{marginLeft: '70%'}} onClick={() => setActive(2)}/>
         </div>
 
     </div>

@@ -10,37 +10,51 @@ import ContactSection from './Components/Sections/ContactSection/ContactSection'
 import ExperienceSection from './Components/Sections/ExperienceSection/ExperienceSection';
 
 function App() {
+  
   return (
     <>
-      <Section height={'600px'} background={'var(--main-bg-color-1)'} content= {
-        <>
-          <NavBar />
-          <MainBanner />
-        </>
-      }/>
-       <Section height={'300px'} background={'linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white, white, white, white)'} content= {
-          <ProjectPreviewBanner />
-      }/>
+
+        <Section height={'600px'} background={'var(--main-bg-color-1)'} content= {
+          <>
+            <NavBar />
+            <MainBanner />
+          </>
+        }/>
+
+        <Section height={'300px'} background={'linear-gradient(to left, rgb(212, 171, 241, 0.5) , rgb(248, 102, 4, 0.3), white, white, white, white)'} content= {
+            <ProjectPreviewBanner />
+        }/>
 
       <Section height={'700px'} background={'white'} id={"skills"} content= {
           <SkillsSection />
       }/>
+
       <Section height={'600px'} background={'var(--main-bg-color-1)'} id={"experience"} content= {
         <ExperienceSection />
       }/>
+
       <Section height={'700px'} background={'white'} content= {
           <ProjectSection/>
       }/>
+
       <Section height={'600px'} background={'white'} content= {
           <GithubSection />
       }/>
+
+
+      
       <Section height={'600px'} background={'linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white, white, white, white)'} id={"contact"} content= {
         <ContactSection />
       }/>
+
+
        <Section height={'100px'} background={'grey'} id={""} content= {
         <>
         </>
       }/>
+
+
+
     </>
   );
 }

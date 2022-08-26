@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './expchooser.module.css'
 
-export default function ExpChooser({active}) {
+export default function ExpChooser({active, onClick, style}) {
 
     active = 0;
 
@@ -20,10 +20,9 @@ export default function ExpChooser({active}) {
 
         <>
 
-            <div className={styles.gradient} style={moveGradient()}/>
 
 
-            <div className={styles.mainContainer}>
+            <div className={styles.mainContainer} onClick={onClick} style={style}>
 
 
             </div>

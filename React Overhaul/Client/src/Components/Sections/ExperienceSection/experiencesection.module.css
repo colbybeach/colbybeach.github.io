@@ -25,3 +25,13 @@
     display: flex;
     justify-content: space-evenly;
 }
+.gradient{
+    height: 70px;
+    width: 220px;
+    background-image: linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.5));
+    position: absolute;
+    margin-top: -30px;
+    border-radius: 10px;
+    z-index: 1;
+    transition: 0.3s;
+}
