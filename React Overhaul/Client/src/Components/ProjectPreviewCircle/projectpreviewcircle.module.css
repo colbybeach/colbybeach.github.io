@@ -22,3 +22,15 @@
     transition: 0.3s;
     cursor: pointer;
 }
+
+.mainCircle img{
+    width: 30px;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.active img{
+    width: 60px;
+    transition: 0.3s;
+    border-radius: 50%;
+}

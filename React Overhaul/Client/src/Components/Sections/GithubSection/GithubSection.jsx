@@ -9,30 +9,20 @@ export default function GithubSection() {
           title: 'Name',
           dataIndex: 'name',
           key: 'name',
-          render: (text) => <a>{text}</a>,
         },
         {
-          title: 'Age',
-          dataIndex: 'age',
-          key: 'age',
+          title: 'Description',
+          dataIndex: 'description',
+          key: 'description',
         },
         {
-          title: 'Address',
-          dataIndex: 'address',
-          key: 'address',
-        },
-        {
-          title: 'Tags',
-          key: 'tags',
-          dataIndex: 'tags',
-          render: (_, { tags }) => (
+          title: 'Languages',
+          dataIndex: 'languages',
+          key: 'languages',
+          render: (_, { languages }) => (
             <>
-              {tags.map((tag) => {
+              {languages.map((tag) => {
                 let color = tag.length > 5 ? 'geekblue' : 'green';
-      
-                if (tag === 'loser') {
-                  color = 'volcano';
-                }
       
                 return (
                   <Tag color={color} key={tag}>
@@ -44,34 +34,48 @@ export default function GithubSection() {
           ),
         },
         {
-          title: 'Action',
-          key: 'action',
-          render: (_, record) => (
-              <a>Invite {record.name}</a>
-          ),
+          title: 'Stars',
+          dataIndex: 'stars',
+          key: 'stars',
+        },
+        {
+          title: 'Date Created',
+          key: 'created',
+          dataIndex: 'created',
+        },
+        {
+          title: 'Last Updated',
+          key: 'updated',
+          dataIndex: 'updated',
         },
       ];
       const data = [
         {
           key: '1',
           name: 'John Brown',
-          age: 32,
-          address: 'New York No. 1 Lake Park',
-          tags: ['nice', 'developer'],
+          description:  "Hello this is a test description!",
+          languages: ['nice', 'developer'],
+          stars: 0,
+          created: '4/12/2021',
+          updated: '8/29/2022', 
         },
         {
           key: '2',
-          name: 'Jim Green',
-          age: 42,
-          address: 'London No. 1 Lake Park',
-          tags: ['loser'],
+          name: 'John Brown',
+          description:  "Hello this is a test description!",
+          languages: ['nice', 'developer'],
+          stars: 0,
+          created: '4/12/2021',
+          updated: '8/29/2022', 
         },
         {
           key: '3',
-          name: 'Joe Black',
-          age: 32,
-          address: 'Sidney No. 1 Lake Park',
-          tags: ['cool', 'teacher'],
+          name: 'John Brown',
+          description:  "Hello this is a test description!",
+          languages: ['nice', 'developer'],
+          stars: 0,
+          created: '4/12/2021',
+          updated: '8/29/2022', 
         },
       ];
       

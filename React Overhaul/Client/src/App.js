@@ -8,6 +8,7 @@ import GithubSection from './Components/Sections/GithubSection/GithubSection';
 import ProjectSection from './Components/Sections/ProjectSection/ProjectSection';
 import ContactSection from './Components/Sections/ContactSection/ContactSection';
 import ExperienceSection from './Components/Sections/ExperienceSection/ExperienceSection';
+import FooterSection from './Components/Sections/FooterSection/FooterSection';
 
 function App() {
   
@@ -48,9 +49,8 @@ function App() {
       }/>
 
 
-       <Section height={'100px'} background={'grey'} id={""} content= {
-        <>
-        </>
+       <Section height={'200px'} background={'grey'} id={""} content= {
+        <FooterSection />
       }/>
 
 

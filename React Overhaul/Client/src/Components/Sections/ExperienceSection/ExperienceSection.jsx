@@ -5,6 +5,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import jg1 from '../../../Images/jg1.jpg'
 import ExpChooser from '../../ExpChooser/ExpChooser'
 import { useState } from 'react'
+import github from '../../../Images/githubIcon.png'
 
 export default function ExperienceSection() {
 
@@ -70,9 +71,24 @@ export default function ExperienceSection() {
 
           <div className={styles.gradient} style={moveGrad()}/>
 
-          <ExpChooser style={{marginRight: '70%'}} onClick={() => setActive(0)}/>
-          <ExpChooser onClick={() => setActive(1)}/>
-          <ExpChooser style={{marginLeft: '70%'}} onClick={() => setActive(2)}/>
+          <ExpChooser 
+            style={{marginRight: '70%'}} 
+            onClick={() => setActive(0)}
+            title={"Jahnel Group"}
+            image={<img src={github}/>}
+          />
+          <ExpChooser 
+            onClick={() => setActive(1)}
+            title={"iComputers"}
+            image={<img src={github}/>}
+          />
+
+          <ExpChooser 
+            style={{marginLeft: '70%'}} 
+            onClick={() => setActive(2)}
+            title={"St. Mary's School"}
+            image={<img src={github}/>}
+          />
         </div>
 
     </div>

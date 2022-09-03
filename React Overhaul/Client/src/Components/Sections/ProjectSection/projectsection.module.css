@@ -16,6 +16,7 @@
     margin-top: 20px;
     box-shadow: var(--box-shadow-1);
     background: linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3));
+    border-radius: 10px;
 }
 .car{
     height: 500px;

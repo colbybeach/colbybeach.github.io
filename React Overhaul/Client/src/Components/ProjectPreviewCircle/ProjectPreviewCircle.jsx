@@ -9,6 +9,7 @@ export default function ProjectPreviewCircle( {image, active, link, setEnter, se
       onMouseEnter={setEnter}
       onMouseLeave={setLeave}
     >
+      {image}
     </div>
 
   )

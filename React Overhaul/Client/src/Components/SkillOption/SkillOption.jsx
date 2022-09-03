@@ -2,7 +2,7 @@ import { Card } from '@mui/material'
 import React from 'react'
 import styles from './skilloption.module.css'
 
-export default function SkillOption({active, onClick, image, title, desc}) {
+export default function SkillOption({active, onClick, image, title}) {
 
 
     function moveGradient(){
@@ -26,8 +26,13 @@ export default function SkillOption({active, onClick, image, title, desc}) {
                 onClick={onClick}
             >
                 {image}
-                {title}
-                {desc}
+                <div className={styles.textContainer}>
+                    <h3>{title}</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit.
+                    </p>
+                </div>
             </Card>
         </>
 

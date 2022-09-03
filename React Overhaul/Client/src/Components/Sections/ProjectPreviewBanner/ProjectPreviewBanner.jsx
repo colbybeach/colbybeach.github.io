@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import ProjectPreviewCircle from '../../ProjectPreviewCircle/ProjectPreviewCircle'
 import styles from './projectpreviewbanner.module.css'
+import fp from '../../../Images/fplogo.png'
 
 export default function ProjectPreviewBanner() {
 
@@ -20,21 +21,25 @@ export default function ProjectPreviewBanner() {
             active={prevActive === 0}
             setEnter={() => setPrevActive(0)}
             setLeave={() => setPrevActive(2)}
+            image={<img src={fp}/>}
           />
            <ProjectPreviewCircle 
             active={prevActive === 1}
             setEnter={() => setPrevActive(1)}
             setLeave={() => setPrevActive(2)}
+            image={<img src={fp}/>}
           />
            <ProjectPreviewCircle 
             active={prevActive === 2}
             setEnter={() => setPrevActive(2)}
             setLeave={() => setPrevActive(2)}
+            image={<img src={fp}/>}
           />
            <ProjectPreviewCircle 
             active={prevActive === 3}
             setEnter={() => setPrevActive(3)}
             setLeave={() => setPrevActive(2)}
+            image={<img src={fp}/>}
           />
 
         </div>        

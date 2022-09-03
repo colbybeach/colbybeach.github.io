@@ -1,20 +1,10 @@
 import React from 'react'
 import styles from './expchooser.module.css'
 
-export default function ExpChooser({active, onClick, style}) {
+export default function ExpChooser({onClick, style, title, image}) {
 
-    active = 0;
 
-    function moveGradient(){
-        // const styles = {marginBottom: '23%'}
 
-        // if(active == 0) styles.marginBottom = '10px'
-        // if(active == 1) styles.marginBottom = '140px'
-        // if(active == 2) styles.marginBottom = '-140px'
-        // if(active == 3) styles.marginBottom = '-420px'
-    
-        // return styles
-    }
 
     return (
 
@@ -23,8 +13,8 @@ export default function ExpChooser({active, onClick, style}) {
 
 
             <div className={styles.mainContainer} onClick={onClick} style={style}>
-
-
+                {image}
+                {title}
             </div>
         </>
 

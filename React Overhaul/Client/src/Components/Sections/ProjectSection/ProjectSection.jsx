@@ -3,6 +3,8 @@ import React from 'react'
 import ProjectCard from '../../ProjectCard/ProjectCard'
 import styles from './projectsection.module.css'
 import { ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons'
+import fp from '../../../Images/fplogo.png'
+
 
 export default function ProjectSection() {
 
@@ -24,28 +26,60 @@ export default function ProjectSection() {
 
                     
                     <div className={styles.carRow}>
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />                        
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />                    
                     </div>
                     <div className={styles.carRow}>
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />                        
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />                    
                     </div>
                     <div className={styles.carRow}>
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />                        
+                        <ProjectCard 
+                            image={<img src={fp}/>}
+                            title={"FlickPick"}
+                            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                        />                    
                     </div>
 
                 </Carousel>
-
    
-            
-
-            </div>
-        
+            </div>     
         </div>
     )
 }
