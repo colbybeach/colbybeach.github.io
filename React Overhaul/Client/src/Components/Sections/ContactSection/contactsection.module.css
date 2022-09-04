@@ -25,3 +25,11 @@
     background-color: white;
     cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+    .socialMediaRow{
+        display: none;
+    }
+    .formContainer{
+        width: 100%;
+    }
+  }

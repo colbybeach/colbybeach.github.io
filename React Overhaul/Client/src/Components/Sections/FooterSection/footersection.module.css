@@ -27,3 +27,8 @@
     margin-bottom: 20px;
 
 }
+@media screen and (max-width: 600px) {
+    .linkRow a{
+        margin: 2px !important;
+    }
+  }
