@@ -2,10 +2,13 @@
     height: 70px;
     width: 70px;
     border-radius: 50%;
+    margin: 10px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    background-color: white;
+
     box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
     transition: 0.3s;
     cursor: pointer;

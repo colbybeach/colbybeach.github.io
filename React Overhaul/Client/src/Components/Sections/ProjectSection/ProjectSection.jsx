@@ -22,6 +22,7 @@ export default function ProjectSection() {
                     arrows 
                     prevArrow={<ArrowLeftOutlined />}
                     nextArrow={<ArrowRightOutlined />}
+                    autoplay={true}
                 >
 
                     

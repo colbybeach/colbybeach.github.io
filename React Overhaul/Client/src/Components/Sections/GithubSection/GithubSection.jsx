@@ -9,6 +9,8 @@ export default function GithubSection() {
           title: 'Name',
           dataIndex: 'name',
           key: 'name',
+          align: 'center',
+          fixed: 'left'
         },
         {
           title: 'Description',
@@ -19,6 +21,7 @@ export default function GithubSection() {
           title: 'Languages',
           dataIndex: 'languages',
           key: 'languages',
+          align: 'center',
           render: (_, { languages }) => (
             <>
               {languages.map((tag) => {
@@ -37,16 +40,19 @@ export default function GithubSection() {
           title: 'Stars',
           dataIndex: 'stars',
           key: 'stars',
+          align: 'center',
         },
         {
           title: 'Date Created',
           key: 'created',
           dataIndex: 'created',
+          align: 'center',
         },
         {
           title: 'Last Updated',
           key: 'updated',
           dataIndex: 'updated',
+          align: 'center',
         },
       ];
       const data = [
@@ -87,7 +93,13 @@ export default function GithubSection() {
 
             <h1>GITHUB REPOS</h1>
 
-            <Table columns={columns} dataSource={data} />
+            <Table 
+              columns={columns} 
+              dataSource={data} 
+              scroll={{
+                x: 1000,
+              }}            
+            />
 
         </div>
     )
