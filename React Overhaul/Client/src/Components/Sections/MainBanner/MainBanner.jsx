@@ -8,7 +8,9 @@ import nobackground from '../../../Images/nobackground.png'
 
 
 export default function MainBanner() {
+
   return (
+    
     <div className={styles.MainBannerContainer}>
 
       <div className={styles.leftSide}>
@@ -17,11 +19,14 @@ export default function MainBanner() {
         <h1 className={styles.bannerTitle}>Who...Me?</h1>
 
         <p className={styles.bannerBio}>
-          "Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip 
-          ex ea commodo consequat."
+              Hey everyone! My name is Colby Beach, a Junior at 
+              Union College in Schenectady, NY, studying both 
+              Computer Science and Economics! Since I was 
+              8 years old I have had an extreme passion for 
+              technology, and I have since learned various tools to 
+              create different projects ranging from mobile appications,
+              web apps, and Chrome extensions! Please feel free to reach out
+              with the contact form below :)
         </p>
 
 

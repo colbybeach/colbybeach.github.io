@@ -1,11 +1,13 @@
 .MainNavBarContainer{
     position: fixed;
-    width: 75%;
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
 }
 
 .NavBarSecondaryContainer{
@@ -29,8 +31,6 @@
     align-items: center;
 }
 
-
-
 .buttonActive{
     color: var(--main-secondary-1) !important;
 }
@@ -38,4 +38,44 @@
 .containedButton{
     background-color: var(--main-secondary-1) !important;
     color: white !important;
+}
+.ham{
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+
+    .MainNavBarContainer{
+        position: fixed;
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+    
+    .NavBarSecondaryContainer{
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .NavBarOtherLinksContainer{
+        display: none;
+    }
+
+}
+
+.draw{
+    height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.draw a{
+    height: 10%;
+    font-size: 18px;
+}
+@media screen and (min-width: 700px) {
+
+    .ham{
+        display: none !important;
+    }
+
 }

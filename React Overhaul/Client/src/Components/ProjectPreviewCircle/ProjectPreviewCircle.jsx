@@ -4,10 +4,11 @@ import styles from './projectpreviewcircle.module.css'
 export default function ProjectPreviewCircle( {image, active, link, setEnter, setLeave} ) {
   return (
 
-    <div 
+    <div
       className={active ? styles.active : styles.mainCircle}
       onMouseEnter={setEnter}
       onMouseLeave={setLeave}
+      onClick={() => {window.open(link)}}
     >
       {image}
     </div>

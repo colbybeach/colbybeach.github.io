@@ -9,6 +9,18 @@
     box-shadow: none !important;
     border-radius: 10px !important;
     box-shadow: var(--box-shadow-1) !important;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .mainContainer{
+        display: none;
+
+    }
 
 }
+
+
+
+
 

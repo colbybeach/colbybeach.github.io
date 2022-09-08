@@ -2,10 +2,16 @@ import React from 'react'
 import styles from './experiencesection.module.css'
 import { Carousel } from 'antd'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
-import jg1 from '../../../Images/jg1.jpg'
 import ExpChooser from '../../ExpChooser/ExpChooser'
 import { useState } from 'react'
 import github from '../../../Images/githubIcon.png'
+
+import jg1 from '../../../Images/jg1.jpg'
+import jg2 from '../../../Images/jg2.jpeg'
+import jg3 from '../../../Images/jg3.jpeg'
+import sms1 from '../../../Images/sms1.jpg'
+import icomputer1 from '../../../Images/icomputer1.jpg'
+
 
 export default function ExperienceSection() {
 
@@ -23,6 +29,60 @@ export default function ExperienceSection() {
     }else return {}
   }
 
+  const data = [
+    {
+      name: "Jahnel Group",
+      dates: "June 2022 - August 2022",
+      description:
+        <p>
+
+          Full-time intern at the software consulting firm, 
+          Jahnel Group Inc, in Schenectady, New York, for the 2022 summer.
+          <ul>
+            <br/>
+            <li>
+                I built all admin and CRUD functionality into an internal employee tracking application using the GRAND
+                stack (GraphQL, ReactJS, Apollo, and Neo4j).
+            </li>
+            <br/>
+            <li>
+              I researched and implemented a service that would allow our client to use biometric information to login to their platform
+              and access various AWS services using ReactJS, KeyCloak, WebAuthn, AWS Cognito, and more.
+            </li>
+          </ul>
+        </p>,
+      skills: 
+        <>
+          <p>HTML, CSS, Javascript, React, Node, Express</p>
+          <p>Neo4j, GraohQL, WebAuthn, Auth0, Firebase, AWS</p>
+        </>,
+      images: [<img src={jg1}/>, <img src={jg2}/>, <img src={jg3}/>]
+    },
+    {
+      name: "iComputers",
+      dates: "August 2020 - September 2022",
+      description: 
+        <p>Founded company that buys and sells used computers
+           on various e-commerce websites such as eBay and Facebook Marketplace.
+        </p>,
+      skills: [],
+      images: [<img src={icomputer1}/>]
+    },
+    {
+      name: "St. Mary's School",
+      dates: "August 2020 - Present",
+      description: <p>
+
+        Resolves IT related problems, including internet issues, 
+        desktop issues, printers, and smart boards to support operational 
+        efficiency.
+
+      </p>,
+      skills: [],
+      images: [<img src={sms1}/>]
+    }
+  ]
+
 
   return (
     <div className={styles.mainBannerContainer}>
@@ -31,24 +91,15 @@ export default function ExperienceSection() {
 
         <div className={styles.chosenText}>
 
+          <div>
           <h1>Experience</h1>
-          <h2>Exp Name (Date 2020 - Date 2024)</h2>
-          <p>
-              Lorem ipsum dolor sit amet, consectetur 
-              adipiscing elit, sed do eiusmod tempor incididunt 
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-              quis nostrud exercitation ullamco laboris nisi ut aliquip 
-              ex ea commodo consequat.
-              "Lorem ipsum dolor sit amet, consectetur 
-              adipiscing elit, sed do eiusmod tempor incididunt 
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-              quis nostrud exercitation ullamco laboris nisi ut aliquip 
-              ex ea commodo consequat.
-          </p>
+          <h2>{data[active].name} ({data[active].dates})</h2>
+          </div>
+            {data[active].description}
+          <div>
           <h3>Skills Used:</h3>
-          <p>Test Test Test Test Test Test</p>
-          <p>Test Test Test Test Test Test</p>
-          <p>Test Test Test Test Test Test</p>
+            {data[active].skills}
+          </div>
 
         </div>
 
@@ -59,9 +110,7 @@ export default function ExperienceSection() {
               nextArrow={<ArrowRightOutlined />}
           >
 
-            <img src={jg1}/>
-            <img src={jg1}/>
-            <img src={jg1}/>
+            {data[active].images}
 
           </Carousel>
 
@@ -77,11 +126,13 @@ export default function ExperienceSection() {
             title={"Jahnel Group"}
             image={<img src={github}/>}
           />
+
           <ExpChooser 
             onClick={() => setActive(1)}
             title={"iComputers"}
             image={<img src={github}/>}
           />
+
 
           <ExpChooser 
             style={{marginLeft: '70%'}} 
@@ -89,6 +140,7 @@ export default function ExperienceSection() {
             title={"St. Mary's School"}
             image={<img src={github}/>}
           />
+
         </div>
 
     </div>

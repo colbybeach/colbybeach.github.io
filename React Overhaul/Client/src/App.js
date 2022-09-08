@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from './Components/Sections/NavBar/NavBar';
 import MainBanner from './Components/Sections/MainBanner/MainBanner';
 import Section from './Components/Section';
@@ -14,23 +14,23 @@ function App() {
   
   return (
     <>
+      <NavBar/>
 
-        <Section height={'600px'} background={'var(--main-bg-color-1)'} content= {
-          <>
-            <NavBar />
-            <MainBanner />
-          </>
-        }/>
+      <Section height={'600px'} background={'var(--main-bg-color-1)'} content= {
+        <>
+          <MainBanner />
+        </>
+      }/>
 
-        <Section height={'300px'} background={'linear-gradient(to left, rgb(212, 171, 241, 0.5) , rgb(248, 102, 4, 0.3), white, white, white, white)'} content= {
-            <ProjectPreviewBanner />
-        }/>
+      <Section height={'300px'} background={'linear-gradient(to left, rgb(212, 171, 241, 0.5) , rgb(248, 102, 4, 0.3), white, white, white, white)'} content= {
+          <ProjectPreviewBanner />
+      }/>
 
       <Section height={'700px'} background={'white'} id={"skills"} content= {
           <SkillsSection />
       }/>
 
-      <Section height={'600px'} background={'var(--main-bg-color-1)'} id={"experience"} content= {
+      <Section height={'700px'} background={'var(--main-bg-color-1)'} id={"experience"} content= {
         <ExperienceSection />
       }/>
 
@@ -42,19 +42,12 @@ function App() {
           <GithubSection />
       }/>
 
-
-      
       <Section height={'600px'} background={'linear-gradient(to left, rgb(212, 171, 241,0.5) , rgb(248, 102, 4,0.3), white, white, white, white)'} id={"contact"} content= {
         <ContactSection />
       }/>
-
-
        <Section height={'200px'} background={'grey'} id={""} content= {
         <FooterSection />
       }/>
-
-
-
     </>
   );
 }
