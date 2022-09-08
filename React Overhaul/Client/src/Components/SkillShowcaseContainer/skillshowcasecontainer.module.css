@@ -12,10 +12,22 @@
 
 .head{
     text-transform: uppercase;
-    margin: 10px;
+    margin: 20px;
 }
 
 .skillRow{
     width: 80%;
     height: 140px;
+    text-align: center;
+}
+
+.skillRow img{
+    width: 48px;
+    margin: 5px;
+}
+@media screen and (max-width: 500px) {
+
+    .skillRow img{
+        width: 32px;
+    }
 }

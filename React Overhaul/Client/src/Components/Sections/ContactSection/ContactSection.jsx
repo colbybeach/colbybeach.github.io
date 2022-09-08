@@ -75,9 +75,12 @@ export default function ContactSection() {
             </div>
 
             <div className={styles.socialMediaRow}>
-                <img className={styles.socialMediaIcon} src={githubIcon} />
-                <img className={styles.socialMediaIcon} src={linkedinIcon} />
-                <img className={styles.socialMediaIcon} src={youtubeIcon} />
+                <img className={styles.socialMediaIcon} src={githubIcon} 
+                onClick={() => {window.open("https://github.com/clawplusstacker")}}/>
+                <img className={styles.socialMediaIcon} src={linkedinIcon} 
+                onClick={() => window.open("https://www.linkedin.com/in/colby-beach-57b66017b/")}/>
+                <img className={styles.socialMediaIcon} src={youtubeIcon} 
+                onClick={() => window.open("https://www.youtube.com/c/Claw100Productions1")}/>
             </div>
 
 

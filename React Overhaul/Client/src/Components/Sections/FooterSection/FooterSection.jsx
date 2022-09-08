@@ -18,9 +18,9 @@ export default function FooterSection() {
 
         <div className={styles.socialRow}>
 
-            <img src={gh}/>
-            <img src={li}/>
-            <img src={yt}/>
+            <img src={gh} onClick={() => {window.open("https://github.com/clawplusstacker")}}/>
+            <img src={li} onClick={() => window.open("https://www.linkedin.com/in/colby-beach-57b66017b/")}/>
+            <img src={yt} onClick={() => window.open("https://www.youtube.com/c/Claw100Productions1")}/>
 
         </div>
 

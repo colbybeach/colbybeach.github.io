@@ -30,7 +30,7 @@ function App() {
           <SkillsSection />
       }/>
 
-      <Section height={'700px'} background={'var(--main-bg-color-1)'} id={"experience"} content= {
+      <Section height={'750px'} background={'var(--main-bg-color-1)'} id={"experience"} content= {
         <ExperienceSection />
       }/>
 

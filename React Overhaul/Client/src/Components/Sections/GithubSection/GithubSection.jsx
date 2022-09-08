@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './githubsection.module.css'
 import { Table, Tag } from 'antd';
 
@@ -13,79 +13,72 @@ export default function GithubSection() {
           fixed: 'left'
         },
         {
-          title: 'Description',
-          dataIndex: 'description',
-          key: 'description',
-        },
-        {
-          title: 'Languages',
-          dataIndex: 'languages',
-          key: 'languages',
+          title: 'Language',
+          dataIndex: 'language',
+          key: 'language',
           align: 'center',
-          render: (_, { languages }) => (
-            <>
-              {languages.map((tag) => {
-                let color = tag.length > 5 ? 'geekblue' : 'green';
+          // render: (_, { language }) => (
+          //   <>
+          //     {language.map((tag) => {
+          //       let color = tag.length > 5 ? 'geekblue' : 'green';
       
-                return (
-                  <Tag color={color} key={tag}>
-                    {tag.toUpperCase()}
-                  </Tag>
-                );
-              })}
-            </>
-          ),
+          //       return (
+          //         <Tag color={color} key={tag}>
+          //           {tag.toUpperCase()}
+          //         </Tag>
+          //       );
+          //     })}
+          //   </>
+          // ),
         },
         {
           title: 'Stars',
-          dataIndex: 'stars',
-          key: 'stars',
+          dataIndex: 'stargazers_count',
+          key: 'stargazers_count',
           align: 'center',
         },
         {
           title: 'Date Created',
-          key: 'created',
-          dataIndex: 'created',
+          key: "created_at",
+          dataIndex: "created_at",
           align: 'center',
+          render: (record) => (
+            <p>
+                {new Date(record).toLocaleDateString()}
+            </p>
+          ),
         },
         {
           title: 'Last Updated',
-          key: 'updated',
-          dataIndex: 'updated',
+          key: "pushed_at",
+          dataIndex: "pushed_at",
           align: 'center',
+          render: (record) => (
+            <p>
+                {new Date(record).toLocaleDateString()}
+            </p>
+          ),
+        },
+        {
+          title: "Link",
+          dataIndex: 'html_url',
+          key: 'html_url',
+          align: 'center',
+          render: (record) => (
+            <a href={record} target={"_blank"}>More Info...</a>
+          ),
         },
       ];
-      const data = [
-        {
-          key: '1',
-          name: 'John Brown',
-          description:  "Hello this is a test description!",
-          languages: ['nice', 'developer'],
-          stars: 0,
-          created: '4/12/2021',
-          updated: '8/29/2022', 
-        },
-        {
-          key: '2',
-          name: 'John Brown',
-          description:  "Hello this is a test description!",
-          languages: ['nice', 'developer'],
-          stars: 0,
-          created: '4/12/2021',
-          updated: '8/29/2022', 
-        },
-        {
-          key: '3',
-          name: 'John Brown',
-          description:  "Hello this is a test description!",
-          languages: ['nice', 'developer'],
-          stars: 0,
-          created: '4/12/2021',
-          updated: '8/29/2022', 
-        },
-      ];
+ 
+      const [data, setData] = useState([]);
       
 
+      fetch('https://api.github.com/users/clawplusstacker/repos')
+        .then(response => response.json())
+        .then(data => {
+          setData(data) 
+        })
+        .catch(error => console.error(error))
 
 
     return (

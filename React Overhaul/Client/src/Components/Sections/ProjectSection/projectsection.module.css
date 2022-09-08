@@ -28,3 +28,12 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 700px){
+    .car{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+}

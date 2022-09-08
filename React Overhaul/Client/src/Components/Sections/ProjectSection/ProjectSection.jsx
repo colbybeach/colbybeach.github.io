@@ -6,9 +6,12 @@ import { ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons'
 import fp from '../../../Images/fplogo.png'
 import ct from '../../../Images/CardTrapIcon.jpg'
 import wc from '../../../Images/WordCountIcon.png'
+import useWindowSize from '../../../useWindowSize'
 
 
 export default function ProjectSection() {
+
+    const width = useWindowSize();
 
 
     return (
@@ -19,6 +22,9 @@ export default function ProjectSection() {
             <div className={styles.projectRow}>
 
 
+            {width > 700 ? 
+
+
                 <Carousel 
                     className={styles.car} 
                     arrows 
@@ -27,44 +33,85 @@ export default function ProjectSection() {
                     autoplay={true}
                 >
 
-                    
-                    <div className={styles.carRow}>
-                        <ProjectCard 
-                            image={<img src={fp}/>}
-                            title={"FlickPick"}
-                            description={"iOS app that lets two or more users match on what movies they would want to watch from various different streaming services."}
-                        />
-                        <ProjectCard 
-                            image={<img src={ct}/>}
-                            title={"CardTrap"}
-                            description={"iOS magic trick app that lets the magician throw a card into his phone and reveal it."}
-                        />                        
-                        <ProjectCard 
-                            image={<img src={wc}/>}
-                            title={"Word Count"}
-                            description={"Chrome extension that will allow the user to highlight text and see how many words and characters there are."}
-                        />                    
-                    </div>
-                    <div className={styles.carRow}>
-                        <ProjectCard 
-                            image={<img src={""}/>}
-                            title={"Watch Me"}
-                            description={"New App/Website for tracking fitness progress and keeping yourself accountable."}
-                        />
-                        <ProjectCard 
-                            image={<img src={""}/>}
-                            title={"Personal Website"}
-                            description={"The website you are currently on :)"}
-                        />  
-                        <ProjectCard 
-                            image={<img src={fp}/>}
-                            title={"FlickPick Website"}
-                            description={"The website for all things FlickPick related :)"}
-                        />                                         
-                    </div>
+                        <div className={styles.carRow}>
+                            <ProjectCard 
+                                image={<img src={fp}/>}
+                                title={"FlickPick"}
+                                description={"iOS app that lets two or more users match on what movies they would want to watch from various different streaming services."}
+                            />
+                            <ProjectCard 
+                                image={<img src={ct}/>}
+                                title={"CardTrap"}
+                                description={"iOS magic trick app that lets the magician throw a card into his phone and reveal it."}
+                            />                        
+                            <ProjectCard 
+                                image={<img src={wc}/>}
+                                title={"Word Count"}
+                                description={"Chrome extension that will allow the user to highlight text and see how many words and characters there are."}
+                            />                    
+                        </div>
+                        <div className={styles.carRow}>
+                            <ProjectCard 
+                                image={<img src={""}/>}
+                                title={"Watch Me"}
+                                description={"New App/Website for tracking fitness progress and keeping yourself accountable."}
+                            />
+                            <ProjectCard 
+                                image={<img src={""}/>}
+                                title={"Personal Website"}
+                                description={"The website you are currently on :)"}
+                            />  
+                            <ProjectCard 
+                                image={<img src={fp}/>}
+                                title={"FlickPick Website"}
+                                description={"The website for all things FlickPick related :)"}
+                            />                                         
+                        </div>
+                        </Carousel>
 
-                </Carousel>
-   
+                    :
+                    <Carousel 
+                    className={styles.car} 
+                    arrows 
+                    prevArrow={<ArrowLeftOutlined />}
+                    nextArrow={<ArrowRightOutlined />}
+                    autoplay={true}
+                >
+
+                            <ProjectCard 
+                                image={<img src={fp}/>}
+                                title={"FlickPick"}
+                                description={"iOS app that lets two or more users match on what movies they would want to watch from various different streaming services."}
+                            />
+                            <ProjectCard 
+                                image={<img src={ct}/>}
+                                title={"CardTrap"}
+                                description={"iOS magic trick app that lets the magician throw a card into his phone and reveal it."}
+                            />                        
+                            <ProjectCard 
+                                image={<img src={wc}/>}
+                                title={"Word Count"}
+                                description={"Chrome extension that will allow the user to highlight text and see how many words and characters there are."}
+                            />  
+                            <ProjectCard 
+                                image={<img src={""}/>}
+                                title={"Watch Me"}
+                                description={"New App/Website for tracking fitness progress and keeping yourself accountable."}
+                            />
+                            <ProjectCard 
+                                image={<img src={""}/>}
+                                title={"Personal Website"}
+                                description={"The website you are currently on :)"}
+                            />  
+                            <ProjectCard 
+                                image={<img src={fp}/>}
+                                title={"FlickPick Website"}
+                                description={"The website for all things FlickPick related :)"}
+                            />   
+                
+                        </Carousel>
+                        
+                        }
             </div>     
         </div>
     )
