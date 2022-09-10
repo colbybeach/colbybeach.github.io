@@ -1,23 +1,20 @@
 import React from 'react'
 import styles from './contactsection.module.css'
-import Form from 'antd/es/form/Form'
-import Input from 'antd/lib/input/Input'
 import { Button } from '@mui/material'
-import TextArea from 'antd/lib/input/TextArea'
 import { UserOutlined, MailOutlined } from '@ant-design/icons'
 import githubIcon from '../../../Images/githubIcon2.png'
 import linkedinIcon from '../../../Images/linkedinIcon2.png'
 import youtubeIcon from '../../../Images/youtubeIcon2.png'
+import { Form, Input } from 'antd'
+
 
 
 
 export default function ContactSection() {
 
-
+    const {Item} = Form
 
     return (
-
-
 
         <div className={styles.mainBannerContainer}>
 
@@ -26,11 +23,10 @@ export default function ContactSection() {
                 <h1>Contact</h1>
 
                 <Form
-                    method="post"
                     layout="vertical"
                 >
 
-                    <Form.Item
+                    <Item
                         label="Name"
                         rules={[{ required: true, message: `Please enter your name.` }]}
                         name="name"
@@ -39,9 +35,9 @@ export default function ContactSection() {
                             placeholder="Name"
                             prefix={<UserOutlined className="site-form-item-icon" />}
                         />
-                    </Form.Item>
+                    </Item>
 
-                    <Form.Item
+                    <Item
                         label="Email"
                         rules={[{ required: true, type: `email`, message: `Please enter your email.` }]}
                         name="email"
@@ -50,26 +46,26 @@ export default function ContactSection() {
                             placeholder="Your Email"
                             prefix={<MailOutlined className="site-form-item-icon" />}
                         />
-                    </Form.Item>
+                    </Item>
 
-                    <Form.Item
+                    <Item
                         label="Message"
                         rules={[{ required: true, message: `Please enter your message.` }]}
                         name="message"
                     >
-                        <TextArea
+                        <Input.TextArea
                             placeholder="Your Message"
                             rows={5}
                             style={{resize: 'none'}}
                             
                         />
-                    </Form.Item>
+                    </Item>
 
-                    <Form.Item>
+                    <Item>
                         <Button variant="contained" className={styles.button}>
                             Send
                         </Button>
-                    </Form.Item>
+                    </Item>
                 </Form>
 
             </div>
@@ -82,9 +78,7 @@ export default function ContactSection() {
                 <img className={styles.socialMediaIcon} src={youtubeIcon} 
                 onClick={() => window.open("https://www.youtube.com/c/Claw100Productions1")}/>
             </div>
-
-
-
+            
         </div>
     )
 }

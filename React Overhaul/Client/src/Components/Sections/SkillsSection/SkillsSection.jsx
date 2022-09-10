@@ -59,9 +59,9 @@ export default function SkillsSection() {
             setData(allData)
             return;
         }else{
-            if(whatActive == 0) setData(languageData)
-            else if (whatActive == 1) setData(webData)
-            else if(whatActive == 2) setData(frameData)
+            if(whatActive === 0) setData(languageData)
+            else if (whatActive === 1) setData(webData)
+            else if(whatActive === 2) setData(frameData)
             else setData(techData);
         }
     }, [whatActive, width])
