@@ -73,7 +73,7 @@ export default function GithubSection() {
       const [data, setData] = useState([]);
       
 
-      fetch('https://api.github.com/users/clawplusstacker/repos')
+      fetch('https://api.github.com/users/colbybeach/repos')
         .then(response => response.json())
         .then(data => {
           setData(data) 
