@@ -7,6 +7,10 @@ import { getExperiences, getSkills } from '../api';
 import { useQuery } from '@tanstack/react-query';
 import SkillLevel from '../components/SkillLevel';
 import ImageCarousel from '../components/ImageCarousel';
+import ContactForm from '../components/ContactForm';
+import SpinningWheel from '../components/SpinningWheel';
+
+
 
 export default function HomePage() {
 
@@ -17,6 +21,7 @@ export default function HomePage() {
     const validCategories = ['language', "web", 'framework', 'technology'];
     const { data: skillData } = useQuery(["skillQuery"], () => getSkills());
     const { data: experienceData } = useQuery(["experienceQuery"], () => getExperiences());
+
 
     return (
         <>
@@ -137,10 +142,17 @@ export default function HomePage() {
 
                 <div className='flex flex-col mt-20 gap-y-10'>
                     <h3 className='text-2xl font-bold'>Personal Projects</h3>
-                    
+                    <SpinningWheel options={["Hey", "Test", "You"]}/>
                 </div>
 
 
+
+
+
+                <div className='flex flex-col mt-20 gap-y-10'>
+                    <h3 className='text-2xl font-bold'>Contact Me</h3>
+                    <ContactForm/>
+                </div>
 
             </div >
         </>
