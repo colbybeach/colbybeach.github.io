@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className='w-full flex pl-4 pr-8 p-4 justify-between shadow-2xl '>
+    <div className='w-full flex px-16 p-4 justify-between shadow-2xl '>
       
         <button className="btn btn-ghost">Colby Beach</button>
 
