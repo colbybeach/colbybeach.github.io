@@ -22,12 +22,10 @@ export default function HomePage() {
     const [selectedExperience, setSelectedExperience] = useState<number>(2);
     const [selectedProject, setSelectedProject] = useState<number>(0);
 
-    const validCategories = ['language', "web", 'framework', 'technology'];
-    const { data: skillData } = useQuery(["skillQuery"], () => getSkills());
+    const validCategories: string[] = ['language', "web", 'framework', 'technology'];
+    const { data: skillData }  = useQuery(["skillQuery"], () => getSkills());
     const { data: experienceData } = useQuery(["experienceQuery"], () => getExperiences());
     const { data: projectData } = useQuery(["projectQuery"], () => getProjects());
-
-
 
 
     return (
@@ -108,9 +106,9 @@ export default function HomePage() {
                         <div className='shadow-2xl bg-neutral flex flex-col gap-y-5 p-10 mt-10 rounded-xl'>
                             {skillData && (
                                 <>
-                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="knowledgeable" />
-                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="proficient" />
                                     <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="lead" />
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="proficient" />
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="knowledgeable" />
                                 </>
                             )}
                         </div>
@@ -134,9 +132,9 @@ export default function HomePage() {
                         <div className='shadow-2xl bg-neutral flex flex-col gap-y-5 p-10 w-1/2 rounded-xl'>
                             {skillData && (
                                 <>
-                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="knowledgeable" />
-                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="proficient" />
                                     <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="lead" />
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="proficient" />
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="knowledgeable" />
                                 </>
                             )}
                         </div>

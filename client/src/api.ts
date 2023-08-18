@@ -30,7 +30,7 @@ interface ContactData {
 
 export const getSkills = async () => {
     const res = await axios.get(`/skills`);
-    return res.data as [Skill[]];
+    return res.data as {[key: string]: Skill[]};
   };
   
 
