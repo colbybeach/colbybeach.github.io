@@ -44,10 +44,10 @@ export default function Navbar() {
 function NavbarButtons() {
   return (
     <>
-      <button className="btn btn-ghost">Home</button>
-      <button className="btn btn-ghost">Skills</button>
-      <button className="btn btn-ghost">Experience</button>
-      <button className="btn btn-primary">Contact</button>
+      <a className="btn btn-ghost" href="#">Home</a>
+      <a className="btn btn-ghost" href="#skills">Skills</a>
+      <a className="btn btn-ghost" href="#experience">Experience</a>
+      <a className="btn btn-primary"  href="#contact">Contact</a>
     </>
   )
 }
