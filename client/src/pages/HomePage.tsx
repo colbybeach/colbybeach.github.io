@@ -57,7 +57,7 @@ export default function HomePage() {
                         <div className='flex gap-2'>
                             <button className='btn btn-primary w-fit md:flex hidden'>Contact Me</button>
                             <a className='btn btn-ghost w-fit md:flex hidden' href="https://github.com/colbybeach" target='_none'>Github</a>
-                            <a className='btn btn-ghost w-fit md:flex hidden' href="https://github.com/https://www.linkedin.com/in/colby-beach-57b66017b/" target='_none'>LinkedIn</a>
+                            <a className='btn btn-ghost w-fit md:flex hidden' href="https://www.linkedin.com/in/colby-beach-57b66017b/" target='_none'>LinkedIn</a>
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@ export default function HomePage() {
                     <div className='flex mt-4 gap-4 mb-5'>
                         <button className='btn btn-primary w-fit '>Contact Me</button>
                         <a className='btn btn-ghost w-fit ' href="https://github.com/colbybeach" target='_none'>Github</a>
-                        <a className='btn btn-ghost w-fit' href="https://github.com/https://www.linkedin.com/in/colby-beach-57b66017b/" target='_none'>LinkedIn</a>
+                        <a className='btn btn-ghost w-fit' href="https://www.linkedin.com/in/colby-beach-57b66017b/" target='_none'>LinkedIn</a>
                     </div>
                     <p className='text-sm'>
                         Hello! My name is Colby Beach, a senior at Union College in Schenectady, NY,
