@@ -14,7 +14,7 @@ export default function SkillLevel({ data, level }: SkillLevelProps) {
         {data.map((skill: Skill, index: number) => (
           skill.level == level &&
           <div className="tooltip" data-tip={skill.skill} key={index}>
-            <img key={index} src={skill.image} alt={`Skill ${index}`} className='w-10 h-10' />
+            <img key={index} src={skill.image} alt={`Skill ${index}`} className='w-10 h-10 ' />
           </div>
         ))}
       </div>
