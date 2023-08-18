@@ -27,11 +27,11 @@ export default function HomePage() {
         <>
             <Navbar />
 
-            <div className='px-16 py-8'>
+            <div className='sm:px-16 px-4 pt-32 pb-8'>
 
                 <div className='w-full flex md:flex-row flex-col items-center justify-around '>
-                    <div className='flex flex-col w-1/2 gap-8'>
-                        <h1 className='text-7xl'>
+                    <div className='flex flex-col md:w-1/2 gap-8'>
+                        <h1 className='md:text-7xl text-5xl md:mb-0 mb-10'>
                             <Typewriter
                                 options={{
                                     strings: ['Who...me?'],
@@ -41,7 +41,7 @@ export default function HomePage() {
                             />
                         </h1>
 
-                        <p>
+                        <p className='md:flex hidden'>
                             Hello! My name is Colby Beach, a senior at Union College in Schenectady, NY,
                             studying both Computer Science and Economics! Since I was 8 years old I have had an
                             extreme passion for technology, and I have since learned various tools to create different
@@ -49,7 +49,7 @@ export default function HomePage() {
                             to reach out with the contact form below :)
                         </p>
 
-                        <button className='btn btn-primary w-fit'>Contact Me</button>
+                        <button className='btn btn-primary w-fit md:flex hidden'>Contact Me</button>
 
                     </div>
 
@@ -61,14 +61,49 @@ export default function HomePage() {
 
                 <HorizontalLine />
 
+                <div className='md:hidden flex flex-col items-center w-full mt-10 '>
+                <p className='text-sm'>
+                    Hello! My name is Colby Beach, a senior at Union College in Schenectady, NY,
+                    studying both Computer Science and Economics! Since I was 8 years old I have had an
+                    extreme passion for technology, and I have since learned various tools to create different
+                    projects ranging from mobile applications, web apps, and even Chrome extensions! Please feel free
+                    to reach out with the contact form below :)
+                </p>
+                <button className='btn btn-primary w-fit mt-6'>Contact Me</button>
+
+                </div>
+
 
 
                 <div className='flex flex-col mt-12 gap-y-10 w-full'>
-
                     <h3 className='text-2xl font-bold'>Skills</h3>
 
-                    <div className='flex justify-between w-full'>
+                    <div className='lg:hidden'>
+                        <select
+                            className='btn btn-outline w-full'
+                            value={selectedSkillIndex}
+                            onChange={(e) => setSelectedSkillIndex(Number(e.target.value))}
+                        >
+                            {skillCategories.map((category, index) => (
+                                <option key={index} value={index}>
+                                    {category}
+                                </option>
+                            ))}
+                        </select>
+                        <div className='shadow-2xl bg-neutral flex flex-col gap-y-5 p-10 mt-10 rounded-xl'>
+                            {skillData && (
+                                <>
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="knowledgeable" />
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="proficient" />
+                                    <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="lead" />
+                                </>
+                            )}
+                        </div>
+                    </div>
 
+
+                    <div className='hidden lg:flex justify-between w-full'>
+                        {/* Stacked sections for larger screens */}
                         <div className='shadow-xl bg-neutral flex flex-col justify-around p-10 w-2/5 rounded-xl'>
                             Skill Categories
                             {skillCategories.map((category, index) => (
@@ -81,27 +116,40 @@ export default function HomePage() {
                                 </button>
                             ))}
                         </div>
-
                         <div className='shadow-2xl bg-neutral flex flex-col gap-y-5 p-10 w-1/2 rounded-xl'>
-                            {skillData &&
+                            {skillData && (
                                 <>
                                     <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="knowledgeable" />
                                     <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="proficient" />
                                     <SkillLevel data={skillData[validCategories[selectedSkillIndex]]} level="lead" />
                                 </>
-                            }
+                            )}
                         </div>
-
                     </div>
                 </div>
+
 
 
                 <div className='flex flex-col gap-y-10 mt-20'>
                     <h3 className='text-2xl font-bold'>Experience</h3>
 
+                    <select
+                        className='btn btn-outline w-full lg:hidden'
+                        value={selectedExperience}
+                        onChange={(e) => {
+                            setSelectedExperience(Number(e.target.value))
+                            console.log(e.target.value)
+                        }}
+                    >
+                        <option value={2} key={2}>Jahnel Group (2023)</option>
+                        <option value={0} key={0}>Cocobolo Group</option>
+                        <option value={1} key={1}>Jahnel Group (2022)</option>
+                        <option value={3} key={3}>iComputers</option>
+                    </select>
+
                     {experienceData ?
-                        <div className='flex justify-between w-full'>
-                            <div className='flex flex-col gap-y-2 w-1/2'>
+                        <div className='flex lg:justify-between w-full lg:flex-row flex-col items-center gap-y-10'>
+                            <div className='flex flex-col gap-y-2 lg:w-1/2'>
                                 <h4 className='text-lg'>{experienceData[selectedExperience].experience} ({experienceData[selectedExperience].dates})</h4>
                                 <p className='font-light text-sm'>
                                     {experienceData[selectedExperience].description}
@@ -111,7 +159,8 @@ export default function HomePage() {
                         </div>
                         : ""}
 
-                    <div className='flex w-full justify-between'>
+
+                    <div className='lg:flex w-full justify-between hidden'>
                         <button
                             className={`btn ${selectedExperience === 2 ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setSelectedExperience(2)}
@@ -142,7 +191,9 @@ export default function HomePage() {
 
                 <div className='flex flex-col mt-20 gap-y-10'>
                     <h3 className='text-2xl font-bold'>Personal Projects</h3>
-                    <SpinningWheel options={["Hey", "Test", "You"]}/>
+                    
+
+                    
                 </div>
 
 
@@ -151,7 +202,7 @@ export default function HomePage() {
 
                 <div className='flex flex-col mt-20 gap-y-10'>
                     <h3 className='text-2xl font-bold'>Contact Me</h3>
-                    <ContactForm/>
+                    <ContactForm />
                 </div>
 
             </div >

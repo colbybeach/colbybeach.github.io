@@ -27,7 +27,7 @@ export default function ContactForm() {
 
   return (
 
-    <div className="p-6 mx-auto rounded-lg shadow-xl bg-neutral w-1/2">
+    <div className="p-6 mx-auto rounded-lg shadow-xl bg-neutral lg:w-1/2 w-full">
                     <h2 className="text-xl font-semibold mb-4">Contact Me</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
