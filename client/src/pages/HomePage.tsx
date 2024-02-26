@@ -157,8 +157,8 @@ export default function HomePage() {
                         <option value={1} key={1}>Freelance Work</option>
                         <option value={2} key={2}>Jahnel Group (2023)</option>
                         <option value={0} key={0}>Cocobolo Group</option>
-                        <option value={4} key={4}>Jahnel Group (2022)</option>
-                        <option value={3} key={3}>iComputers</option>
+                        <option value={3} key={3}>Jahnel Group (2022)</option>
+                        <option value={4} key={4}>iComputers</option>
                     </select>
 
                     {experienceData ?
@@ -194,14 +194,14 @@ export default function HomePage() {
                             Cocobolo Group
                         </button>
                         <button
-                            className={`btn ${selectedExperience === 4 ? 'btn-primary' : 'btn-outline'}`}
-                            onClick={() => setSelectedExperience(4)}
+                            className={`btn ${selectedExperience === 3 ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setSelectedExperience(3)}
                         >
                             Jahnel Group (2022)
                         </button>
                         <button
-                            className={`btn ${selectedExperience === 3 ? 'btn-primary' : 'btn-outline'}`}
-                            onClick={() => setSelectedExperience(3)}
+                            className={`btn ${selectedExperience === 4 ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setSelectedExperience(4)}
                         >
                             iComputers
                         </button>
