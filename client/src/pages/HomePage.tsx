@@ -154,9 +154,10 @@ export default function HomePage() {
                             console.log(e.target.value)
                         }}
                     >
+                        <option value={1} key={1}>Freelance Work</option>
                         <option value={2} key={2}>Jahnel Group (2023)</option>
                         <option value={0} key={0}>Cocobolo Group</option>
-                        <option value={1} key={1}>Jahnel Group (2022)</option>
+                        <option value={4} key={4}>Jahnel Group (2022)</option>
                         <option value={3} key={3}>iComputers</option>
                     </select>
 
@@ -174,6 +175,12 @@ export default function HomePage() {
 
 
                     <div className='lg:flex w-full justify-between hidden'>
+                         <button
+                            className={`btn ${selectedExperience === 1 ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setSelectedExperience(1)}
+                        >
+                            Freelance Work
+                        </button>
                         <button
                             className={`btn ${selectedExperience === 2 ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setSelectedExperience(2)}
@@ -187,8 +194,8 @@ export default function HomePage() {
                             Cocobolo Group
                         </button>
                         <button
-                            className={`btn ${selectedExperience === 1 ? 'btn-primary' : 'btn-outline'}`}
-                            onClick={() => setSelectedExperience(1)}
+                            className={`btn ${selectedExperience === 4 ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setSelectedExperience(4)}
                         >
                             Jahnel Group (2022)
                         </button>
