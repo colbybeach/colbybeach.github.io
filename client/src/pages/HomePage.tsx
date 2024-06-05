@@ -174,18 +174,19 @@ export default function HomePage() {
 
 
                     <div className='lg:flex w-full justify-between hidden'>
+                      <button
+                            className={`btn ${selectedExperience === 2 ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setSelectedExperience(2)}
+                        >
+                            Jahnel Group 
+                        </button>
                          <button
                             className={`btn ${selectedExperience === 1 ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setSelectedExperience(1)}
                         >
                             Freelance Work
                         </button>
-                        <button
-                            className={`btn ${selectedExperience === 2 ? 'btn-primary' : 'btn-outline'}`}
-                            onClick={() => setSelectedExperience(2)}
-                        >
-                            Jahnel Group (2023)
-                        </button>
+      
                         <button
                             className={`btn ${selectedExperience === 0 ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setSelectedExperience(0)}
@@ -195,12 +196,6 @@ export default function HomePage() {
                         <button
                             className={`btn ${selectedExperience === 3 ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setSelectedExperience(3)}
-                        >
-                            Jahnel Group (2022)
-                        </button>
-                        <button
-                            className={`btn ${selectedExperience === 4 ? 'btn-primary' : 'btn-outline'}`}
-                            onClick={() => setSelectedExperience(4)}
                         >
                             iComputers
                         </button>
