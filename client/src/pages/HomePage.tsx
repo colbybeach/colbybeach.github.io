@@ -154,11 +154,10 @@ export default function HomePage() {
                             console.log(e.target.value)
                         }}
                     >
+                        <option value={2} key={2}>Jahnel Group</option>
                         <option value={1} key={1}>Freelance Work</option>
-                        <option value={2} key={2}>Jahnel Group (2023)</option>
                         <option value={0} key={0}>Cocobolo Group</option>
-                        <option value={3} key={3}>Jahnel Group (2022)</option>
-                        <option value={4} key={4}>iComputers</option>
+                        <option value={3} key={3}>iComputers</option>
                     </select>
 
                     {experienceData ?
