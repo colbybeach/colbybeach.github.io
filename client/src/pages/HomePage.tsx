@@ -73,7 +73,7 @@ export default function HomePage() {
             <p className="md:flex hidden">
               Hello! My name is Colby, and I am super passionate about
               programming, buisness, and leadership. I am currently a software
-              developer at the startup MorningLineAI (part-time) as well as
+              developer at the startup MorningLineAI (part-time), as well as
               Jahnel Group Inc in Schenectady, NY (full-time), where I have been
               for the last 3 years. Feel free to reach out anytime with the form
               below, I would love to talk!
@@ -111,10 +111,10 @@ export default function HomePage() {
           <p className="">
             Hello! My name is Colby, and I am super passionate about
             programming, buisness, and leadership. I am currently a software
-            developer at the startup MorningLineAI (part-time) as well as Jahnel
-            Group Inc in Schenectady, NY (full-time), where I have been for the
-            last 3 years. Feel free to reach out anytime with the form below, I
-            would love to talk!
+            developer at the startup MorningLineAI (part-time), as well as
+            Jahnel Group Inc in Schenectady, NY (full-time), where I have been
+            for the last 3 years. Feel free to reach out anytime with the form
+            below, I would love to talk!
           </p>
         </div>
 
