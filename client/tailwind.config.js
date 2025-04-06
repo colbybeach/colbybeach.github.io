@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: 'class', // enables use of 'dark' class
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,9 +10,5 @@ export default {
       'code': ['Courier New'],
     },
     extend: {},
-  },
-  plugins: [require("daisyui")],
-  daisyui: {
-    themes: ["light", "dark", "night"],
   },
 }
