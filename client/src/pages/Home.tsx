@@ -2,11 +2,6 @@
 
 import { useEffect, useState } from "react";
 import profile from "../assets/ColbyProfilePic.jpg";
-import Github from "../assets/icons/github.svg?react";
-import Linkedin from "../assets/icons/linkedin.svg?react";
-import Sun from "../assets/icons/sun.svg?react";
-import Moon from "../assets/icons/moon.svg?react";
-import Work from "../assets/icons/work.svg?react";
 import Typewriter from "typewriter-effect";
 import SkillCategoryButton from "../components/SkillCategoryButton";
 import {
@@ -20,9 +15,16 @@ import {
 } from "../data";
 import ProjectCard from "../components/ProjectCard";
 
+import { FaBriefcase, FaGithub, FaLinkedin, FaRegMoon } from "react-icons/fa";
+import { IoSunny } from "react-icons/io5";
+import SkillRow from "../components/SkillRow";
+import ProjectModal from "../components/ProjectModal";
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
   const [currentSkill, setCurrentSkill] = useState(0);
+  const [isProjectModalOpen, setProjectModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(0);
 
   useEffect(() => {
     if (darkMode) {
@@ -34,9 +36,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#ebebeb] text-[#363945] dark:bg-gray-800 dark:text-[#ebebeb] w-full flex justify-center ">
-      <div className="z-10 absolute inset-0 dark:bg-[radial-gradient(#ebebeb55_1px,transparent_1px)] bg-[radial-gradient(#36394555_1px,transparent_1px)] bg-[size:48px_36px] pointer-events-none" />
-      <div className="lg:w-2/3 w-full sm:px-32 px-8 py-11 flex flex-col gap-y-12">
-        <div className="w-full flex sm:flex-row flex-col gap-y-4 sm:items-center items-start px-12 py-8 justify-between shadow-md dark:shadow-lg dark:bg-white/10  rounded-xl">
+      <div className="fixed inset-0 z-10 dark:bg-[radial-gradient(#ebebeb55_1px,transparent_1px)] bg-[radial-gradient(#36394555_1px,transparent_1px)] bg-[size:48px_36px] pointer-events-none" />
+      <div className="w-[800px]  mx-8 py-16 flex flex-col gap-y-12">
+        <div className="w-full flex md:flex-row flex-col gap-y-6 md:items-center items-start px-12 py-8 justify-between shadow-md dark:shadow-lg dark:bg-white/10 bg-gray-200  rounded-xl">
           <img
             src={profile}
             alt="Profile"
@@ -44,28 +46,28 @@ export default function Home() {
           />
 
           {/* Name and Title */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 pl-8">
-            <h1 className="text-3xl font-bold leading-6">Colby Beach</h1>
-            <p className="text-md w-3/4 leading-6">
+          <div className="flex flex-col md:text-center md:items-center gap-6 md:pl-8">
+            <h1 className="text-2xl font-bold leading-6">Colby Beach</h1>
+            <p className="text-md md:w-3/4 leading-6">
               SWE @ Jahnel Group & MLAI | Founder of Jupiter Ventures
             </p>
           </div>
 
           {/* Social Icons and Toggle */}
-          <div className="flex flex-col justify-between gap-6 ">
-            <div className="flex justify-between pb-2">
-              <Github
+          <div className="flex md:flex-col md:w-fit w-full flex-row justify-between gap-6 ">
+            <div className="flex justify-between gap-x-4 pb-2">
+              <FaGithub
                 className="w-6 h-6 cursor-pointer"
                 onClick={() =>
                   (window.location.href = "https://example.com/1234")
                 }
               />
-              <Linkedin className="w-6 h-6 cursor-pointer" />
-              <Work className="w-6 h-6 cursor-pointer" />
+              <FaLinkedin className="w-6 h-6 cursor-pointer" />
+              <FaBriefcase className="w-6 h-6 cursor-pointer" />
             </div>
 
             <div className="flex items-center gap-2">
-              <Sun className="w-6 h-6" />
+              <IoSunny className="w-6 h-6" />
               <label className="relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -76,7 +78,7 @@ export default function Home() {
                 <div className="w-11 h-6 bg-gray-300 rounded-full peer-checked/toggle:bg-indigo-600 transition-colors duration-300 ease-in-out" />
                 <div className="absolute top-1 left-1 bg-white w-4 h-4 rounded-full shadow-md transition-all duration-300 ease-in-out peer-checked/toggle:translate-x-5" />
               </label>
-              <Moon className="w-6 h-6" />
+              <FaRegMoon className="w-5 h-5" />
             </div>
           </div>
         </div>
@@ -105,8 +107,8 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <span className="text-3xl font-bold ">Skills</span>
 
-          <div className="flex gap-6">
-            <div className="flex flex-col gap-2">
+          <div className="flex justify-between">
+            <div className="flex flex-col gap-2 w-[35%]">
               {skillCat.map((item, index) => {
                 return (
                   <SkillCategoryButton
@@ -119,47 +121,43 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className="flex gap-x-4 flex-wrap items-center">
+            <div className="w-[50%] flex gap-x-6 flex-wrap justify-center items-center">
               {currentSkill == 0
-                ? languageSkills.map((item, index) => <SkillRow item={item} />)
+                ? languageSkills.map((item) => <SkillRow item={item} />)
                 : currentSkill == 1
-                  ? webSkills.map((item, index) => <SkillRow item={item} />)
+                  ? webSkills.map((item) => <SkillRow item={item} />)
                   : currentSkill == 2
-                    ? frameworkSkills.map((item, index) => (
-                        <SkillRow item={item} />
-                      ))
+                    ? frameworkSkills.map((item) => <SkillRow item={item} />)
                     : currentSkill == 3
-                      ? techSkills.map((item, index) => (
-                          <SkillRow item={item} />
-                        ))
-                      : certs.map((item, index) => <SkillRow item={item} />)}
+                      ? techSkills.map((item) => <SkillRow item={item} />)
+                      : certs.map((item) => <SkillRow item={item} />)}
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
           <span className="text-3xl font-bold ">Experience & Projects</span>
-          {projects.map((item) => {
-            return <ProjectCard project={item} />;
-          })}
+          <div className="flex justify-between gap-y-6 flex-wrap w-full">
+            {projects.map((item, index) => {
+              return (
+                <ProjectCard
+                  project={item}
+                  onClick={() => {
+                    setProjectModalOpen(true);
+                    setCurrentProject(index);
+                  }}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
 
-interface lanSkillProps {
-  item: {
-    image: string;
-    skill: string;
-  };
-}
-
-function SkillRow({ item }: lanSkillProps) {
-  return (
-    <div className="flex gap-2 items-center">
-      <img src={item.image} className="w-4 h-4" />
-      <span className="text-xs">{item.skill}</span>
+      <ProjectModal
+        currentProject={currentProject}
+        isOpen={isProjectModalOpen}
+        onClose={() => setProjectModalOpen(false)}
+      />
     </div>
   );
 }
