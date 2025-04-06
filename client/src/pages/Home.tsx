@@ -1,7 +1,7 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 import { useEffect, useState } from "react";
-import profile from "../assets/ColbyProfilePic.jpg";
+import profile from "../assets/ColbyProfilePic.png";
 import Typewriter from "typewriter-effect";
 import SkillCategoryButton from "../components/SkillCategoryButton";
 import {
@@ -21,12 +21,29 @@ import SkillRow from "../components/SkillRow";
 import ProjectModal from "../components/ProjectModal";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
   const [currentSkill, setCurrentSkill] = useState(0);
   const [isProjectModalOpen, setProjectModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(0);
 
   useEffect(() => {
+    const storedPreference = localStorage.getItem("darkMode");
+    if (storedPreference !== null) {
+      setDarkMode(storedPreference === "true");
+    } else {
+      // Optional: set based on system preference if not set yet
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setDarkMode(prefersDark);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", String(darkMode));
+
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -37,7 +54,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#ebebeb] text-[#363945] dark:bg-gray-800 dark:text-[#ebebeb] w-full flex justify-center ">
       <div className="fixed inset-0 z-10 dark:bg-[radial-gradient(#ebebeb55_1px,transparent_1px)] bg-[radial-gradient(#36394555_1px,transparent_1px)] bg-[size:48px_36px] pointer-events-none" />
-      <div className="w-[800px]  mx-8 py-16 flex flex-col gap-y-12">
+      <div className="w-[800px]  mx-8 pt-16 py-8 flex flex-col gap-y-12">
         <div className="w-full flex md:flex-row flex-col gap-y-6 md:items-center items-start px-12 py-8 justify-between shadow-md dark:shadow-lg dark:bg-white/10 bg-gray-200  rounded-xl">
           <img
             src={profile}
@@ -59,11 +76,22 @@ export default function Home() {
               <FaGithub
                 className="w-6 h-6 cursor-pointer"
                 onClick={() =>
-                  (window.location.href = "https://example.com/1234")
+                  (window.location.href = "https://github.com/colbybeach")
                 }
               />
-              <FaLinkedin className="w-6 h-6 cursor-pointer" />
-              <FaBriefcase className="w-6 h-6 cursor-pointer" />
+              <FaLinkedin
+                className="w-6 h-6 cursor-pointer"
+                onClick={() => {
+                  window.location.href =
+                    "https://www.linkedin.com/in/colby-beach-57b66017b/";
+                }}
+              />
+              <FaBriefcase
+                className="w-6 h-6 cursor-pointer"
+                onClick={() => {
+                  window.location.href = "https://jahnelgroup.com/";
+                }}
+              />
             </div>
 
             <div className="flex items-center gap-2">
@@ -150,6 +178,26 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+
+        <div className="flex justify-center items-center gap-4">
+          <FaGithub
+            className="w-3 h-3 cursor-pointer"
+            onClick={() =>
+              (window.location.href = "https://github.com/colbybeach")
+            }
+          />
+          <span className="text-xs">
+            Colby Beach - {new Date().getFullYear()}
+          </span>
+
+          <FaLinkedin
+            className="w-3 h-3 cursor-pointer"
+            onClick={() => {
+              window.location.href =
+                "https://www.linkedin.com/in/colby-beach-57b66017b/";
+            }}
+          />
         </div>
       </div>
 
