@@ -55,7 +55,7 @@ export default function Home() {
         <div className="min-h-screen bg-[#ebebeb] text-[#363945] dark:bg-gray-800 dark:text-[#ebebeb] w-full flex justify-center ">
             <div className="fixed inset-0 z-10 dark:bg-[radial-gradient(#ebebeb55_1px,transparent_1px)] bg-[radial-gradient(#36394555_1px,transparent_1px)] bg-[size:48px_36px] pointer-events-none" />
             <div className="w-[800px]  mx-8 pt-16 py-8 flex flex-col gap-y-12">
-                <div className="w-full flex md:flex-row flex-col gap-y-6 md:items-center items-start px-12 py-8 justify-between shadow-md dark:shadow-lg dark:bg-white/10 bg-gray-200  rounded-xl">
+                <div className="w-full flex md:flex-row flex-col gap-y-6 md:items-center items-start px-12 py-8 justify-between shadow-md dark:shadow-lg dark:bg-white/10 bg-[#e1e1e1]  rounded-xl">
                     <img
                         src={profile}
                         alt="Profile"
