@@ -177,29 +177,6 @@ export const projects: Project[] = [
     },
 
     {
-        title: "Morningline.ai",
-        dates: "August 2024 - Present",
-        shortDescription: "Lead Software Engineer",
-        role: "Lead Software Engineer | Saratoga, NY",
-        description: (
-            <>
-                At MLAI I am a lead software engineer reviewing all code changes
-                to ensure quality and scalability, as well as completing new
-                feature development to help our platform improve each day.
-                <br /> <br />
-                MorningLine.ai is a cutting-edge horse racing platform designed
-                to provide advanced predictive analytics and data-driven
-                insights for horse betting enthusiasts.
-            </>
-        ),
-        skills: [
-            <FaReact className="w-5 h-5" />,
-            <BiLogoTypescript className="w-5 h-5" />,
-            <BiLogoGoogleCloud className="w-5 h-5" />,
-        ],
-        icon: MorninglineAi,
-    },
-    {
         title: "LTI (Logic Technology Inc.)",
         dates: "December 2024 - Present",
         shortDescription: "AI & Technology Strategy Consulting",
@@ -222,6 +199,29 @@ export const projects: Project[] = [
             <SiExpress className="w-5 h-5" />,
         ],
         icon: LTI,
+    },
+    {
+        title: "Morningline.ai",
+        dates: "August 2024 - Present",
+        shortDescription: "Lead Software Engineer",
+        role: "Lead Software Engineer | Saratoga, NY",
+        description: (
+            <>
+                At MLAI I am a lead software engineer reviewing all code changes
+                to ensure quality and scalability, as well as completing new
+                feature development to help our platform improve each day.
+                <br /> <br />
+                MorningLine.ai is a cutting-edge horse racing platform designed
+                to provide advanced predictive analytics and data-driven
+                insights for horse betting enthusiasts.
+            </>
+        ),
+        skills: [
+            <FaReact className="w-5 h-5" />,
+            <BiLogoTypescript className="w-5 h-5" />,
+            <BiLogoGoogleCloud className="w-5 h-5" />,
+        ],
+        icon: MorninglineAi,
     },
     {
         title: "Cocobolo Group",
