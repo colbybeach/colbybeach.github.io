@@ -40,6 +40,7 @@ import MorninglineAi from "./assets/morninglineai.jpeg";
 import Cocobolo from "./assets/cocobologroup.jpg";
 import QuantBuilder from "./assets/qunatbuilder.png";
 import LTI from "./assets/LTI.jpeg";
+import Coinbase from "./assets/coinbase.png";
 
 export interface Skill {
     skill: string;
@@ -127,8 +128,39 @@ export const certs = [
 
 export const projects: Project[] = [
     {
+        title: "Coinbase",
+        dates: "September 2025 - Present",
+        shortDescription: "Software Engineer",
+        role: "Software Engineer | New York, NY",
+        description: (
+            <>
+                Helping the development of an emerging product within Coinbase's
+                institutional division, primarily using React, Typescript,
+                Next.JS, and Go.
+            </>
+        ),
+        skills: [
+            <FaReact className="w-5 h-5" />,
+            <BiLogoTypescript className="w-5 h-5" />,
+            <FaNode className="w-5 h-5" />,
+            <FaAws className="w-5 h-5" />,
+            <SiExpress className="w-5 h-5" />,
+            <BiLogoMongodb className="w-5 h-5" />,
+            <SiMui className="w-5 h-5" />,
+            <BiLogoPostgresql className="w-5 h-5" />,
+            <BiLogoTailwindCss className="w-5 h-5" />,
+            <FaJira className="w-5 h-5" />,
+            <div className="bg-current rounded-md px-1 py-[2px] flex items-center">
+                <span className="dark:text-gray-800 text-[#ebebeb] font-bold text-xs ">
+                    C
+                </span>
+            </div>,
+        ],
+        icon: Coinbase,
+    },
+    {
         title: "Jahnel Group",
-        dates: "June 2022 - Present",
+        dates: "June 2022 - September 2025",
         shortDescription: "Software Engineer",
         role: "Software Engineer | Schenectady, NY",
         description: (
@@ -178,7 +210,7 @@ export const projects: Project[] = [
 
     {
         title: "LTI (Logic Technology Inc.)",
-        dates: "December 2024 - Present",
+        dates: "December 2024 - September 2025",
         shortDescription: "AI & Technology Strategy Consulting",
         role: "Software Engineer Consultant",
         description: (
@@ -202,7 +234,7 @@ export const projects: Project[] = [
     },
     {
         title: "Morningline.ai",
-        dates: "August 2024 - Present",
+        dates: "August 2024 - September 2025",
         shortDescription: "Lead Software Engineer",
         role: "Lead Software Engineer | Saratoga, NY",
         description: (

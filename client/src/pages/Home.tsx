@@ -67,9 +67,7 @@ export default function Home() {
                         <h1 className="text-2xl font-bold leading-6">
                             Colby Beach
                         </h1>
-                        <p className="text-md leading-6">
-                            SWE @ Jahnel Group | LTI | MLAI
-                        </p>
+                        <p className="text-md leading-6">SWE @ Coinbase</p>
                     </div>
 
                     {/* Social Icons and Toggle */}
@@ -128,11 +126,8 @@ export default function Home() {
                     <p className="text-sm leading-8">
                         Hello! My name is Colby, and I am super passionate about
                         programming, business, and leadership. I am currently a
-                        software developer at Jahnel Group Inc in Schenectady,
-                        NY (full-time), where I have been for the last 3 years,
-                        as well as LTI and the startup MorningLine.ai
-                        (part-time). Feel free to reach out anytime, I would
-                        love to talk 😆!
+                        software developer at Coinbase. Feel free to reach out
+                        anytime, I would love to talk 😆!
                     </p>
                 </div>
 
