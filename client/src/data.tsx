@@ -148,7 +148,6 @@ export const projects: Project[] = [
             <FaAws className="w-5 h-5" />,
             <SiExpress className="w-5 h-5" />,
             <BiLogoMongodb className="w-5 h-5" />,
-            <SiMui className="w-5 h-5" />,
             <BiLogoPostgresql className="w-5 h-5" />,
             <FaJira className="w-5 h-5" />,
         ],
