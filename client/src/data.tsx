@@ -22,7 +22,6 @@ import {
     FaPython,
     FaReact,
     FaSwift,
-    FaGolang,
 } from "react-icons/fa";
 
 import { RiJavascriptFill } from "react-icons/ri";
@@ -42,6 +41,7 @@ import Cocobolo from "./assets/cocobologroup.jpg";
 import QuantBuilder from "./assets/qunatbuilder.png";
 import LTI from "./assets/LTI.jpeg";
 import Coinbase from "./assets/coinbase.png";
+import { FaGolang } from "react-icons/fa6";
 
 export interface Skill {
     skill: string;
