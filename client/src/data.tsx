@@ -22,6 +22,7 @@ import {
     FaPython,
     FaReact,
     FaSwift,
+    FaGolang,
 } from "react-icons/fa";
 
 import { RiJavascriptFill } from "react-icons/ri";
@@ -81,6 +82,7 @@ export const languageSkills: Skill[] = [
     },
     { skill: "Java", image: <FaJava className="w-5 h-5" /> },
     { skill: "Swift", image: <FaSwift className="w-5 h-5" /> },
+    { skill: "Go", image: <FaGolang className="w-5 h-5" /> },
 ];
 
 export const webSkills = [
@@ -142,19 +144,13 @@ export const projects: Project[] = [
         skills: [
             <FaReact className="w-5 h-5" />,
             <BiLogoTypescript className="w-5 h-5" />,
-            <FaNode className="w-5 h-5" />,
+            <FaGolang className="w-5 h-5" />,
             <FaAws className="w-5 h-5" />,
             <SiExpress className="w-5 h-5" />,
             <BiLogoMongodb className="w-5 h-5" />,
             <SiMui className="w-5 h-5" />,
             <BiLogoPostgresql className="w-5 h-5" />,
-            <BiLogoTailwindCss className="w-5 h-5" />,
             <FaJira className="w-5 h-5" />,
-            <div className="bg-current rounded-md px-1 py-[2px] flex items-center">
-                <span className="dark:text-gray-800 text-[#ebebeb] font-bold text-xs ">
-                    C
-                </span>
-            </div>,
         ],
         icon: Coinbase,
     },
@@ -193,9 +189,9 @@ export const projects: Project[] = [
             <BiLogoTypescript className="w-5 h-5" />,
             <FaNode className="w-5 h-5" />,
             <FaAws className="w-5 h-5" />,
+            <SiMui className="w-5 h-5" />,
             <SiExpress className="w-5 h-5" />,
             <BiLogoMongodb className="w-5 h-5" />,
-            <SiMui className="w-5 h-5" />,
             <BiLogoPostgresql className="w-5 h-5" />,
             <BiLogoTailwindCss className="w-5 h-5" />,
             <FaJira className="w-5 h-5" />,
