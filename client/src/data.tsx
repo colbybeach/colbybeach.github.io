@@ -210,10 +210,10 @@ export const projects: Project[] = [
         role: "Software Engineer Consultant",
         description: (
             <>
-                I currently lead the development of a new full-stack application
-                for a manufacturing client, enabling real-time views and alerts
-                into the critical infrastructure of their manufacturing plants.
-                We estimate that this product will save our client upwards of 25
+                Lead the development of a new full-stack application for a
+                manufacturing client, enabling real-time views and alerts into
+                the critical infrastructure of their manufacturing plants. We
+                estimate that this product will save our client upwards of 25
                 million dollars a year in pure profit. Built with React,
                 Typescript, MySQL, and AWS.
             </>
@@ -234,9 +234,9 @@ export const projects: Project[] = [
         role: "Lead Software Engineer | Saratoga, NY",
         description: (
             <>
-                At MLAI I am a lead software engineer reviewing all code changes
-                to ensure quality and scalability, as well as completing new
-                feature development to help our platform improve each day.
+                Lead software engineer reviewing all code changes to ensure
+                quality and scalability, as well as completing new feature
+                development to help our platform improve each day.
                 <br /> <br />
                 MorningLine.ai is a cutting-edge horse racing platform designed
                 to provide advanced predictive analytics and data-driven

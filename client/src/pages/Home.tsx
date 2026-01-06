@@ -91,7 +91,7 @@ export default function Home() {
                                 className="w-6 h-6 cursor-pointer"
                                 onClick={() => {
                                     window.location.href =
-                                        "https://jahnelgroup.com/";
+                                        "https://coinbase.com/";
                                 }}
                             />
                         </div>
